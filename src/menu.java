@@ -17,23 +17,25 @@ public class menu {
 		try {
 			text = Integer.parseInt(keyboard.next());
 		} catch (NumberFormatException e) {
-			System.out.println("invalid input");
+			
 		} finally {
 			text = 0;
 		}
 		switch (text) {
 
-		case 1:
+		  case 1:
 			System.out.println("Game is loading...");
 			break;
-		case 2:
+        
+		  case 2:
 			System.out.println("Which state do you want to load?");
 			break;
-		case 3:
+        
+		  case 3:
 			System.out.println("Which state do you want to load?");
 			break;
 
-		default:
+		  default:
 			System.out.println("Wrong input!");
 
 		} // end of switch
