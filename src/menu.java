@@ -1,25 +1,27 @@
 import java.util.*;
-import java.util.Scanner; 
+import java.util.Scanner;
+
 import java.io.*;
 
 public class menu {
- 
-  
-    public static void main(String[] args) throws IOException {
+
+	public static void main(String[] args) throws IOException {
     
     Scanner keyboard = new Scanner(System.in);
     
     
     System.out.println(" ###################\n#                   #\n# World War of Ants #\n#                   # \n ###################  \n ");
     
-    System.out.println(" _________\n 1) Start \n _________\n 2) Load\n _________\n 3) Exit \n _________\n\n");
- 
- 
-    int text = keyboard.next();
-    
-       
+    System.out.println(" _________\n 1) Start \n _________\n 2) Load\n _________\n 3) Exit \n _________\n\n"); 
+    int text;
+    try {
+     text = Integer.parseInt(keyboard.next());
+    } catch(NumberFormatException e) {
+    	System.out.println("invalid input");
+    } finally {
+        text = 0;
+    }
      switch (text)
-    
      {
     
       case 1:
@@ -39,6 +41,6 @@ public class menu {
 
 
 
-  }  //end of static void main
-  
-  }  //end of wwa
+  } // end of static void main
+
+} // end of wwa
