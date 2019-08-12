@@ -1,4 +1,7 @@
+package gui;
 
+
+import game.World;
 import java.util.Scanner;
 /**
  * Main user interface.
@@ -7,20 +10,19 @@ public class MainUserInterface {
     /**
      * Player ID so that we can keep track.
      */
+    boolean turnDone = false;
     private int playerID;
-    private Game game;
+    private World game;
     private Scanner scanner;
     private UserInterface userInterface;
-    public MainUserInterface(Game game) {
+    public MainUserInterface(World game) {
         this.game = game;
         scanner = new Scanner(System.in);
     }
 
     public void run() {
-        for(;;) {
-            if(userInterface != null) {
-                
-            }
+        while(!turnDone) {
+            //Process...
         }
     }
 }

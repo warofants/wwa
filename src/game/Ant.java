@@ -1,3 +1,5 @@
+package game;
+
 /**
  * Basically a unit object.
  */

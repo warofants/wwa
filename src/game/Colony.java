@@ -1,3 +1,5 @@
+package game;
+
 
 import java.util.ArrayList;
 
@@ -6,15 +8,7 @@ import java.util.ArrayList;
  */
 public class Colony {
     ArrayList<Ant> ants;
-    private int id;
-    private Colony(int id) {
-        this.id = id;
+    private Colony() {
         ants = new ArrayList<>();
     }
-
-    public int getID() {
-        return id;
-    }
-    
-    
 }
