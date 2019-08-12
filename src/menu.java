@@ -14,6 +14,7 @@ public class menu {
 
 		System.out.println(" _________\n 1) Start \n _________\n 2) Load\n _________\n 3) Exit \n _________\n\n");
 		int text;
+		//
 		try {
 			text = Integer.parseInt(keyboard.next());
 		} catch (NumberFormatException e) {
