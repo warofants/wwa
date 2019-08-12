@@ -1,4 +1,4 @@
-package game;
+package world.war.ants.game;
 
 
 import java.util.ArrayList;

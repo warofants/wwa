@@ -1,4 +1,4 @@
-package gui;
+package world.war.ants.gui;
 
 
 import java.util.Scanner;

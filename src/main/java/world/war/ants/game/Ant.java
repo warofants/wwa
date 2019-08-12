@@ -1,4 +1,4 @@
-package game;
+package world.war.ants.game;
 
 /**
  * Basically a unit object.

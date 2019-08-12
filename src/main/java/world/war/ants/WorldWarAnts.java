@@ -1,8 +1,9 @@
+package world.war.ants;
 
-import gui.TextMenu;
+import world.war.ants.gui.TextMenu;
 
-public class wwa {
 
+public class WorldWarAnts {
     public static void main(String[] args) {
         TextMenu menu = new TextMenu();
         menu.addOption("New Game");

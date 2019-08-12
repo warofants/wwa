@@ -1,7 +1,7 @@
-package gui;
+package world.war.ants.gui;
 
 
-import game.World;
+import world.war.ants.game.World;
 import java.util.Scanner;
 /**
  * Main user interface.
