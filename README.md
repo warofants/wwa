@@ -10,7 +10,7 @@ TBD
 
 TBD
 
-## Screnshots
+## Screenshots
 
 TBD
 
@@ -22,6 +22,10 @@ The user is able to explore their hive and issue orders.
 ## Contributing
 
 Anyone is welcome to contribute. Feel free to fork this repository, and make a Pull Request when you've got something working. Contact [anthonyLuttrell](https://github.com/anthonyLuttrell) if you'd like to request additional permissions.
+
+## Resources
+[Discord](https://discordapp.com/invite/NACP6WZ)
+[Trello](https://trello.com/b/xDj6KfHq/world-war-of-ants)
 
 ## Authors and Acknowledgements
 
