@@ -1,4 +1,4 @@
-package main.java.logic;
+package logic;
 
 /**
  * Base class to extend logic objects off of

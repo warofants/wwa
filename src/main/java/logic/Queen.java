@@ -1,4 +1,4 @@
-package main.java.logic;
+package logic;
 
 /**
  * The queen class is very undecided at the moment.
