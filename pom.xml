@@ -20,7 +20,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>world.war.ants.WorldWarAnts</mainClass>
+                            <mainClass>world.war.ants.Game</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
