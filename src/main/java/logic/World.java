@@ -1,6 +1,8 @@
 package main.java.logic;
 
+import java.util.ArrayList;
 import java.util.List;
+
 
 /**
  * Class that handles all location specific data (ie unit collisions)
@@ -13,7 +15,7 @@ public class World {
     public World(int width, int height) {
         worldMap = new ArrayList<WorldTile>();
 	for (int i = 0; i < width * height; i++) {
-            worldMap[i] = new WorldTile();
+            worldMap.add(new WorldTile());
 	}
     }
     
@@ -31,7 +33,7 @@ public class World {
     }
      
     public WorldTile getTile(int x, int y) {
-        return new WorldTile(worldMap[x + y * width]);
+        return new WorldTile(worldMap.get(x + y * width));
     }
 
 
@@ -44,6 +46,6 @@ public class World {
     }
 
     public void setTile(int x, int y, WorldTile tile) {
-        worldMap[x + y * width] = tile;
+        worldMap.set(x + y * width, tile);
     }
 }

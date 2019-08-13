@@ -23,6 +23,6 @@ public class WorldTile {
         return new Entity(localEntity);
     }
     public void setEntity(Entity newEntity) {
-        localEntitiy = newEntity;
+        localEntity = newEntity;
     }
 }
