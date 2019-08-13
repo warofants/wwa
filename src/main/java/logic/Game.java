@@ -5,9 +5,10 @@ import java.util.ArrayList;
 public class Game {
     private Player[] players;
     private World world;
-    private int currentTick = 0;
+    private volatile int currentTick = 0;
 
     public Game(int numberOfPlayers) {
+        world = new World();
         players = new Player[numberOfPlayers];
 
         for (int i = 0; i < numberOfPlayers; i++) {
