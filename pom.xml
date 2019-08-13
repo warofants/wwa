@@ -20,12 +20,11 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>world.war.ants.Game</mainClass>
+                            <mainClass>main.java.Main</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
             </plugin>
         </plugins>
     </build>
-
 </project>
