@@ -26,5 +26,6 @@
                 </configuration>
             </plugin>
         </plugins>
+        <sourceDirectory>main</sourceDirectory>
     </build>
 </project>
