@@ -11,7 +11,10 @@ public class Entity {
         this.x = x;
         this.y = y;
     }
-
+    public Entity(Entity toCopy) {
+        x = toCopy.getX();
+	y = toCopy.getY();
+    }
     public int getX() {
         return x;
     }
