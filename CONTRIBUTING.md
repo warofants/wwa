@@ -5,3 +5,6 @@ It is recommended that you first read [github's contribution guide](https://gith
 
 ## Issues
 Before starting working on an issue, please comment your intent do so. This is to avoid two different people working on the same issue.
+
+## Code standards
+TBD
