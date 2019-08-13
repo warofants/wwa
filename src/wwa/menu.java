@@ -28,9 +28,9 @@ public class menu {
         
     } catch (NumberFormatException e) {
           System.out.println("Wrong input!");
-    } finally {
-      text = 0;
+          text = 0;
     }
+      //hier musste der finally block weg sonst währe immer 0 rausgekommen
       
       
       switch (text) {
@@ -46,8 +46,9 @@ public class menu {
         case 3:
           OperationExecutor.executeOperation(new ExitGame());
           break;
-
-
+          default:
+        	  //ich hab mal noch nen default reingemacht 
+        	  System.out.println("Input error!");
     } // end of switch
       
 
