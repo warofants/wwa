@@ -1,3 +1,11 @@
+<a href="https://github.com/badges/shields/graphs/contributors" alt="Contributors">
+    <img src="https://img.shields.io/github/contributors/warofants/wwa" />
+</a>
+
+<a href="https://discord.gg/HjJCwm5">
+    <img src="https://img.shields.io/discord/610183667905462306?logo=discord" alt="chat on Discord">
+</a>
+
 # World War of Ants
 
 World War of Ants is a game about managing lives of ants, making sure their colony is fed, maintained, defended and prosperous. It is built with Java, and uses a command line interface for player input.
