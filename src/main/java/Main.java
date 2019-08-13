@@ -10,5 +10,7 @@ public class Main {
             game.tick();
             // Render goes here
         }
+
+        System.out.println("worked");
     }
 }
