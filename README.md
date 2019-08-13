@@ -45,6 +45,7 @@ Anyone is welcome to contribute. Feel free to fork this repository, and make a P
 ## Authors and Acknowledgements
 
 This project was conceived by [Anthony Luttrell](https://github.com/anthonyLuttrell) and is currently mantained by its community.
+Click [here](https://github.com/warofants/wwa/graphs/contributors) if you want to see all of the contributors to this project.
 
 ## License
 
