@@ -23,6 +23,10 @@ The user is able to explore their hive and issue orders.
 
 Anyone is welcome to contribute. Feel free to fork this repository, and make a Pull Request when you've got something working. Contact [anthonyLuttrell](https://github.com/anthonyLuttrell) if you'd like to request additional permissions.
 
+[Programming Document](https://docs.google.com/document/d/1p5i64NT7B5y-CNH9MyeQT5jwRByZ2o8yJnSnykOSJNQ/edit)
+
+[Suggestions Document](https://docs.google.com/document/d/1yr9REhs6ev9SFzBuuHrqM-ivjuUrOdPJwc0rheYKv28/edit?pli=1)
+
 ## Resources
 [Discord](https://discordapp.com/invite/NACP6WZ)
 [Trello](https://trello.com/b/xDj6KfHq/world-war-of-ants)
