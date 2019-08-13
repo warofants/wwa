@@ -10,20 +10,11 @@ import main.java.logic.Game;
 public class Main {
 
     public static void main(String[] args) {
-        printLogo();
         Game game = new Game(4);
 
         while (!game.isFinished()) {
             game.tick();
             // Render goes here
-        }
-    }
-
-    private static void printLogo() {
-        try (Stream<String> stream = Files.lines(Paths.get("Logo.txt"))) {
-            stream.forEach(System.out::println);
-        } catch (IOException e) {
-            e.printStackTrace();
         }
     }
 }
