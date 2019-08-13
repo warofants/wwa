@@ -3,7 +3,6 @@ package main.java.logic;
 import java.util.ArrayList;
 import java.util.List;
 
-
 /**
  * Class that handles all location specific data (ie unit collisions)
  */
