@@ -1,0 +1,13 @@
+package wwa;
+
+interface Operation{
+
+  public void execute();
+
+}
+
+
+
+
+
+
