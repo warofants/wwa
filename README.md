@@ -17,7 +17,11 @@ Given that this project was conceived with beginners in mind, a section for sett
 
 First, you'll need to install the Java Development Kit (JDK). Considering compatibility and other issues, it was decided that OpenJDK 8 would be used to develop this project.
 
-Since OpenJDK 11 is compatible with it, you may install it from [this link](https://openjdk.java.net/), from Redhat's openJDK [download page](https://developers.redhat.com/products/openjdk/download) or you could also get it bundled from some IDE like IntelliJ.
+We recommend getting OpenJDK from [AdoptOpenJDK](https://adoptopenjdk.net/), select OpenJDK 8 and choose HotSpot as the JVM.
+
+If you do not want to use that you can also use [Redhat's openJDK](https://developers.redhat.com/products/openjdk/download).
+
+Since OpenJDK 11 is (mostly) backwards compatible with java 8 you can also use that, which is the jdk shipped with Intellij IDEA (This means that if you plan on using Intellij IDEA you can skip this step).
 
 ### Integrated Development Environment
 
