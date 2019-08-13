@@ -16,10 +16,10 @@ public class World {
 	for (int i = 0; i < width * height; i++) {
             worldMap.add(new WorldTile());
 	}
+	this.width = width;
+	this.height = height;
     }
     
-    
-
     public void addQueen(int x, int y, int playerID) throws UnsupportedOperationException {
         throw new UnsupportedOperationException("World::addQueen is unimplemented!");
     }
@@ -33,15 +33,6 @@ public class World {
      
     public WorldTile getTile(int x, int y) {
         return new WorldTile(worldMap.get(x + y * width));
-    }
-
-
-    public void setWidth(int newWidth) {
-        width = newWidth;
-    }
-
-    public void setHeight(int newHeight) {
-        height = newHeight;
     }
 
     public void setTile(int x, int y, WorldTile tile) {
