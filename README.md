@@ -28,7 +28,7 @@ You'll also need to install an Integrated Development Environment (IDE) to make 
 + NetBeans
 + IntelliJ Community IDEA
 
-We recommend using [IntelliJ](https://code.visualstudio.com/) (code-oss), as it is easy to install and contains tutorials for its interface. It also gives you the option to download plugins, some of which may be useful to you. Its most recent version include OpenJDK 11, making step one optional.
+We recommend using [IntelliJ](https://www.jetbrains.com/idea/) (code-oss), as it is easy to install and contains tutorials for its interface. It also gives you the option to download plugins, some of which may be useful to you. Its most recent version include OpenJDK 11, making step one optional.
 
 ### Git
 
