@@ -17,7 +17,7 @@ Given that this project was conceived with beginners in mind, a section for sett
 
 First, you'll need to install the Java Development Kit (JDK). Considering compatibility and other issues, it was decided that OpenJDK 8 would be used to develop this project.
 
-We recommend getting [OpenJDK](https://openjdk.java.net/) from [AdoptOpenJDK](https://adoptopenjdk.net/), select OpenJDK 8 and choose HotSpot as the JVM.
+We recommend getting OpenJDK from [AdoptOpenJDK](https://adoptopenjdk.net/), select OpenJDK 8 and choose HotSpot as the JVM.
 
 If you do not want to use that you can also use [Redhat's openJDK](https://developers.redhat.com/products/openjdk/download).
 
