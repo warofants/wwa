@@ -9,9 +9,7 @@ An open source project created mostly by motivated beginners and experienced pro
 
 ## Contributing
 
-The bulk of the development process is contained within our Discord group. If you'd like to contribute, consider joining our group. 
-
-Given that this project was conceived with beginners in mind, a section for setting up the programming environment is necessary. For Java development, there are some requirements before diving into it.
+Before contributing, please read the [guide](contributing.md).
 
 ### Java Development Kit
 
