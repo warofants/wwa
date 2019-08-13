@@ -5,6 +5,7 @@ import world.war.ants.gui.TextMenu;
 //Testing
 public class WorldWarAnts {
     public static void main(String[] args) {
+        System.out.println("Testing again!");
         final String NEW_GAME = "New Game";
         final String ABOUT = "About";
         final String HELP = "Help";
