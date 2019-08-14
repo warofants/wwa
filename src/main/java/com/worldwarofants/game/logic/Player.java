@@ -1,4 +1,4 @@
-package main.java.logic;
+package com.worldwarofants.game.logic;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package main.java.logic;
+package com.worldwarofants.game.logic;
 
 import java.util.ArrayList;
 
@@ -9,6 +9,7 @@ public class Game {
 
     public Game(int numberOfPlayers) {
         players = new Player[numberOfPlayers];
+        world = new World();
 
         for (int i = 0; i < numberOfPlayers; i++) {
             // Create new player object
@@ -40,6 +41,6 @@ public class Game {
      * @return true if game has ended, false game is in progress
      */
     public boolean isFinished() {
-        return false;
+        return true;
     }
 }
