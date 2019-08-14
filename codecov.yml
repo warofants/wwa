@@ -1,0 +1,6 @@
+coverage:
+  precision: 2
+  round: nearest
+  range: "40...70"
+  ignore: 
+     -  
