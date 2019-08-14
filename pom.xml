@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>world.war.ants</groupId>
-    <artifactId>world_war_ants</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <groupId>com.worldwarofants.game</groupId>
+    <artifactId>world-war-of-ants-game</artifactId>
     <packaging>jar</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <name> World War of Ants </name>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
-    
+
     <build>
         <plugins>
             <plugin>
@@ -20,12 +21,23 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>main.java.Main</mainClass>
+                            <mainClass>com.worldwarofants.game.Main</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>cobertura-maven-plugin</artifactId>
+                <version>2.7</version>
+                <configuration>
+                    <formats>
+                        <format>html</format>
+                        <format>xml</format>
+                    </formats>
+                    <check/>
+                </configuration>
+            </plugin>
         </plugins>
-        <sourceDirectory>main</sourceDirectory>
     </build>
 </project>
