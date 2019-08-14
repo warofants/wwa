@@ -1,4 +1,5 @@
 import java.util.List;
+import src.main.java.logic.Entity;
 //TODO: Allow scrolling
 //TODO: Construction of GameMap
 /**
