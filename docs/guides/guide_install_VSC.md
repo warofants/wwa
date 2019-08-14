@@ -36,6 +36,8 @@ Git all in all is a very lightweight programm and there are a lot of clients for
 ## Getting everything together
 
 ### Git the project
+We will start by cloning the main project, which means you can change files locally but not push them to the main project. This will be explained later on on git forks and pull requests and how they work, for now this is just for demonstration purposes.
+
 First off let's start by getting the Project data ont your computer with git.
 For this you will need to choose a folder in which you want to put your project files, it doesn't matter where but on windows machines Documents makes most sense and on Linux/Max OSX machines ~/ (home) makes the most sense.
 
