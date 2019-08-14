@@ -1,4 +1,4 @@
-package main.java.io;
+package com.worldwarofants.game.io;
 
 
 import java.util.Scanner;
