@@ -1,4 +1,0 @@
-language: java
-rvm:
-  - 1.8
-  - jvm
