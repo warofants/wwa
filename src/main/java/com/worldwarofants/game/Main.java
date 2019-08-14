@@ -1,6 +1,6 @@
-package main.java;
+package com.worldwarofants.game;
 
-import main.java.logic.Game;
+import com.worldwarofants.game.logic.Game;
 
 public class Main {
     public static void main(String[] args) {
