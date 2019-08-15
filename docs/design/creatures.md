@@ -3,12 +3,12 @@ Different species of creatures and their traits.
 
 Originally written by anthonyLuttrell
 ### _Army Ants_:
-Attacking ants have no nest, so they're nomads. Mostly, the individual ants are not special, they often win with their numerical superiority. They act as a social unit. When to army ants tribes meet,they ignore each other. [Army Ant](https://en.wikipedia.org/wiki/Army_ant)
+Attacking ants have no nest, so they're nomads. Mostly, the individual ants are not special, they often win with their numerical superiority. They act as a social unit. When to army ants tribes meet,they ignore each other. [Army com.worldwarofants.game.logic.Entity.Ant](https://en.wikipedia.org/wiki/Army_ant)
 * #### [Eciton burchelli](https://en.wikipedia.org/wiki/Eciton_burchellii)
     - Knwon for their swarm raids
     - Specialized in killing termites, wasps and of course other ants
-* #### [Bullet Ant](https://en.wikipedia.org/wiki/Paraponera_clavata)
-* #### [Giant Amazonian Ant](https://en.wikipedia.org/wiki/Dinoponera)
+* #### [Bullet com.worldwarofants.game.logic.Entity.Ant](https://en.wikipedia.org/wiki/Paraponera_clavata)
+* #### [Giant Amazonian com.worldwarofants.game.logic.Entity.Ant](https://en.wikipedia.org/wiki/Dinoponera)
 * #### [Nomamyrmex Esenbeckii](https://www.antwiki.org/wiki/Nomamyrmex_esenbeckii)
     - They are armoured
     - They try to swarm their victims, because they are superior in number
