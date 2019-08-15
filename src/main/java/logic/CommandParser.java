@@ -1,5 +1,4 @@
 package main.java.logic;
-import java.util.arraylist;
 
 /**
  * Split Command
