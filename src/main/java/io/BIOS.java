@@ -4,6 +4,7 @@
  * from other sections of the code base and act on them)
  * @version 1.1
  */
+package com.worldwarofants.game.io;
 public class BIOS {
     /*
      * TODO: Create map, print to screen
@@ -13,7 +14,7 @@ public class BIOS {
     public BIOS() {}
 
     public static void passInput(String input) {
-        System.err.println(input);
+        //TODO: Make this act on inputs
     }
 
 }

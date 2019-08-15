@@ -6,6 +6,7 @@ import java.awt.event.ComponentListener;
  * Class that forms the frame of the user console
  * @version 1.1
  */
+package com.worldwarofants.game.io.console;
 public class MainConsoleFrame extends JFrame {
     private int rows, columns;
     private MainConsolePanel console;

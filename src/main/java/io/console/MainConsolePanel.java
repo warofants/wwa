@@ -5,12 +5,13 @@ import javax.swing.JLabel;
 import java.awt.BorderLayout;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-
+import com.worldwarofants.game.assets.AsciiArt;
 /**
  * Class that acts as the main pane of the user console. Responsible
  * for gathering user input and displaying the game map
  * @version 1.1
  */
+package com.worldwarofants.game.io.console;
 class MainConsolePanel extends JPanel {
     private JLabel header;//Most likely, will display resources + stats
     private JTextArea gameText;
@@ -21,6 +22,7 @@ class MainConsolePanel extends JPanel {
         gameText = new JTextArea();
         gameText.setRows(rows);
         gameText.setColumns(columns);
+        gameText.setText(AsciiArt.GetArtFrom("StartLogo.txt"));
         gameText.setEditable(false);
 
         userInputField = new JTextField();
@@ -41,7 +43,9 @@ class MainConsolePanel extends JPanel {
         add(gameText,BorderLayout.CENTER);
         add(userInputField,BorderLayout.PAGE_END);
     }
-
+    public void writeToConsole(String passedInput) {
+        gameText.set(passedInput);
+    }
     /**
      * Method that adjusts the scale of output after console is resized
      * @param rows
