@@ -15,8 +15,8 @@ public class AboutAssets {
      */
     public String readAsset(File file) {
         StringBuilder sb = new StringBuilder();
-        try (Stream<String> stream = Files.lines(Paths.get("../assets" + file))) {
-            stream.forEach(sb::append);
+        try (Stream<String> stream = Files.lines(Paths.get("src\\main\\java\\com\\worldwarofants\\game\\assets\\" + file))) {
+            stream.forEach(s -> sb.append(s + "\n"));
         }
         catch (IOException e) {
             System.out.println(e.getMessage());
