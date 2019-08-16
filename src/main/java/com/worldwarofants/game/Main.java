@@ -1,9 +1,9 @@
 package com.worldwarofants.game;
 
+import com.worldwarofants.game.io.MainMenu;
+
 public class Main {
     public static void main(String[] args) {
-
-        System.out.println("Worked");
-        //
+        new MainMenu().open();
     }
 }

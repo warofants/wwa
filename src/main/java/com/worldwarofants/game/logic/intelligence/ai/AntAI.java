@@ -1,15 +1,18 @@
 package com.worldwarofants.game.logic.intelligence.ai;
 
-import com.worldwarofants.game.logic.Player;
-import com.worldwarofants.game.logic.intelligence.MoveMaker;
+import com.worldwarofants.game.logic.intelligence.AntMoveMaker;
+import com.worldwarofants.game.logic.players.AntPlayer;
+import com.worldwarofants.game.logic.world.WorldAPIRequest;
 
-public class DefaultAI extends MoveMaker {
-    public DefaultAI(Player player) {
-        super(player);
+import java.util.ArrayList;
+
+public class AntAI extends AntMoveMaker {
+    public AntAI(AntPlayer antPlayer) {
+        super(antPlayer);
     }
 
     @Override
-    public int makeMove() {
-        return 1;
+    public ArrayList<WorldAPIRequest> makeMove() {
+        return null;
     }
 }

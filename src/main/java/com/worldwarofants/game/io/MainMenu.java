@@ -1,17 +1,26 @@
 package com.worldwarofants.game.io;
 
+import com.worldwarofants.game.logic.Game;
 
-import java.util.Scanner;
+public class MainMenu {
+    public void open() {
 
-
-/**
- * This class isn't finalized. Charlie team is working on a main menu
- */
-public class MainMenu implements UserInterface {
-
-    @Override
-    public void doUI(Scanner scanner) {
-        
     }
-    
+
+    public void loadGame() {
+        // TODO save load team, load a game
+        startGame(new Game());
+    }
+
+    public void newGame() {
+        startGame(new Game());
+    }
+
+    public void editOptions() {
+
+    }
+
+    public void startGame(Game game) {
+        game.start();
+    }
 }

@@ -4,7 +4,7 @@
 
 # World War of Ants
 
-World War of Ants is a game about managing lives of ants, making sure their colony is fed, maintained, defended and prosperous. It is built with Java, and uses a command line interface for player input.
+World War of Ants is a game about managing lives of ants, making sure their colony is fed, maintained, defended and prosperous. It is built with Java, and uses a command line interface for antPlayer input.
 
 ## Motivation
 

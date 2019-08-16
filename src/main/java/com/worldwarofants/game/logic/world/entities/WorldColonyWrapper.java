@@ -1,4 +1,17 @@
 package com.worldwarofants.game.logic.world.entities;
 
-public class WorldColonyWrapper {
+import com.worldwarofants.game.logic.colony.Colony;
+import com.worldwarofants.game.logic.world.WorldEntity;
+
+public class WorldColonyWrapper extends WorldEntity {
+    private Colony colony;
+
+    public WorldColonyWrapper(int xPos, int yPos, int uid, Colony colony) {
+        super(xPos, yPos, uid, EntityType.COLONY);
+        this.colony = colony;
+    }
+
+    public Colony getColony() {
+        return colony;
+    }
 }

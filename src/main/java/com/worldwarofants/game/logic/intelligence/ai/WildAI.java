@@ -1,4 +1,18 @@
 package com.worldwarofants.game.logic.intelligence.ai;
 
-public class WildAI {
+import com.worldwarofants.game.logic.intelligence.WildMoveMaker;
+import com.worldwarofants.game.logic.players.WildPlayer;
+import com.worldwarofants.game.logic.world.WorldAPIRequest;
+
+import java.util.ArrayList;
+
+public class WildAI extends WildMoveMaker {
+    public WildAI(WildPlayer wildPlayer) {
+        super(wildPlayer);
+    }
+
+    @Override
+    public ArrayList<WorldAPIRequest> makeMove() {
+        return null;
+    }
 }
