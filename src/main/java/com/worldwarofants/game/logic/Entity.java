@@ -3,32 +3,19 @@ package com.worldwarofants.game.logic;
 /**
  * Base class to extend logic objects off of
  */
-public class Entity {
-    private int x;
-    private int y;
+ public class Entity {
 
-    public Entity(int x, int y) {
-        this.x = x;
-        this.y = y;
-    }
+    protected int health;
+    protected int stamina;
+    protected int hunger;
+    protected int combatAttack;
+    protected int combatDefense;
+    protected boolean isSpawned;
+    protected int xPos;
+    protected int yPos;
+    protected int isPlayable;
+    protected String allegiance;
+    protected String location;
 
-    public int getX() {
-        return x;
-    }
 
-    public void setX(int x) {
-        this.x = x;
-    }
-
-    public int getY() {
-        return y;
-    }
-
-    public void setY(int y) {
-        this.y = y;
-    }
-
-    public Exception render() {
-        return new Exception("Please @over ride the render method");
-    }
 }
