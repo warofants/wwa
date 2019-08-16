@@ -1,0 +1,34 @@
+################################################
+#                                              #
+#            YAML SPECIES DATABASE             #
+#                                              #
+#    This configuration file is tasked with    #
+#    declaring various species of different    #
+#       that can inhabit the game world.       #
+#                                              #
+################################################
+
+example_ant:                      
+  name: "Example Ant"                          # Common English name of species being modelled
+  name_latin: "exemplum formica"               # Latin name of the species being modelled
+  description: "This isn't a real ant. 
+  If this shows up in your game, please 
+  submit a bug report. Thanks!"                # Short description. Doesn't have to be multiline.
+  health: 10                                   # Base health of a species
+  attack: 5                                    # Base attack of a species
+  defense: 0                                   # Base defense of a species
+  traits:                                      # List of traits that this species possess 
+    - casteless 
+    - erroneous
+
+test_ant:
+  name: "Test Ant"
+  name_latin: "periculum formica"
+  description: "This isn't a real ant. 
+  If this shows up in your game, please 
+  submit a bug report. Thanks!"
+  health: 10
+  attack: 5
+  defense: 0
+  traits:
+    - erroneous 
