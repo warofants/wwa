@@ -1,14 +1,10 @@
-<a href="https://github.com/badges/shields/graphs/contributors" alt="Contributors">
-    <img src="https://img.shields.io/github/contributors/warofants/wwa" />
-</a>
-
-<a href="https://discord.gg/HjJCwm5">
-    <img src="https://img.shields.io/discord/610183667905462306?logo=discord" alt="chat on Discord">
-</a>
+![GitHub contributors](https://img.shields.io/github/contributors/warofants/wwa)
+![Discord](https://img.shields.io/discord/610183667905462306)
+[![Build Status](https://travis-ci.org/warofants/wwa.svg?branch=master)](https://travis-ci.org/warofants/wwa)
 
 # World War of Ants
 
-World War of Ants is a game about managing lives of ants, making sure their colony is fed, maintained, defended and prosperous. It is built with Java and uses a command line interface for player input.
+World War of Ants is a game about managing lives of ants, making sure their colony is fed, maintained, defended and prosperous. It is built with Java, and uses a command line interface for player input.
 
 ## Motivation
 
@@ -23,6 +19,7 @@ To play the game you'll need to download the jar file from the [releases tab](ht
 ### Prerequisites
 
 #### Java Development Kit
+
 
 First, you'll need to install the Java Development Kit (JDK). Considering compatibility and other issues, it was decided that OpenJDK 8 would be used to develop this project.
 
@@ -41,14 +38,14 @@ Since OpenJDK 11 is (mostly) backwards compatible with java 8 you can also use t
  + NetBeans
  + IntelliJ Community IDEA
  
- We recommend using [IntelliJ](https://www.jetbrains.com/idea/), as it is easy to install and contains tutorials for its interface. It also gives you the option to download plugins, some of which may be useful to you. Its most recent version includes OpenJDK 11, making step one optional.
- 
+We recommend using [IntelliJ](https://www.jetbrains.com/idea/), as it is easy to install and contains tutorials for its interface. It also gives you the option to download plugins, some of which may be useful to you. Its most recent version include OpenJDK 11, making step one optional.
+
  #### Git
  
  You'll also need to install git on your computer. You can find it for your particular Operating System by following [this link](https://git-scm.com/downloads)
  
- Anyone is welcome to contribute. Feel free to fork this repository and make a Pull Request when you've got something working. Contact [anthonyLuttrell](https://github.com/anthonyLuttrell) if you'd like to request additional permissions.
- 
+Anyone is welcome to contribute. Feel free to fork this repository, and make a Pull Request when you've got something working. Contact [anthonyLuttrell](https://github.com/anthonyLuttrell) if you'd like to request additional permissions.
+
 ### Getting the code
 
 To get World War of Ants locally you need to clone the repository, it is recommended to make a fork first so you can mess around in the code without affecting the original.
@@ -77,7 +74,7 @@ java -jar FILENAME.jar
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on the process for submitting pull requests to us.
 
 ## Resources
 + [Discord](https://discordapp.com/invite/NACP6WZ)
