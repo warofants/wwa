@@ -1,7 +1,7 @@
 package com.worldwarofants.game.logic.combat;
 
-/*
- * Player wrapper class holding all parameters used in combat processing
+/**
+ * Represents one opponent and contains all parameters necessary for processing combat
  * */
 public class CombatSide {
 	

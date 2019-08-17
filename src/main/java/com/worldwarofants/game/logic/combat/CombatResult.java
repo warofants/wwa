@@ -1,7 +1,7 @@
 package com.worldwarofants.game.logic.combat;
 
-/*
- * object of this class is built and returned after combat processing
+/**
+ * Holds all data necessary for processing combat result
  * */
 public class CombatResult {
 }
