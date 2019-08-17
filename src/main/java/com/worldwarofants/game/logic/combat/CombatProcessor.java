@@ -2,7 +2,7 @@ package com.worldwarofants.game.logic.combat;
 
 
 /**
- *	High level interface to combat processing
+ *	High level interface to be used for processing combat between two sides
  */
 public interface CombatProcessor {
 	

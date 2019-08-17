@@ -1,6 +1,5 @@
 package com.worldwarofants.game.logic.combat;
 
-
 /**
  * Simple implementation of {@link CombatProcessor}
  */

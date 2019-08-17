@@ -5,4 +5,5 @@ package com.worldwarofants.game.logic.combat;
  * */
 public class CombatSide {
 	
+	//we can't start writing this class until base entity classes are well defined
 }
