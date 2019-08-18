@@ -1,6 +1,6 @@
 package com.worldwarofants.game.logic.world.entities;
 
-import com.worldwarofants.game.logic.moves.antgroups.AntGroup;
+import com.worldwarofants.game.logic.players.antgroups.AntGroup;
 import com.worldwarofants.game.logic.world.WorldEntity;
 
 public class WorldAntGroupWrapper extends WorldEntity {

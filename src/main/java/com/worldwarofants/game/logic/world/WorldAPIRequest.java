@@ -9,6 +9,15 @@ public class WorldAPIRequest {
         this.entity = entity;
     }
 
+    /**
+     * Optionally create a new request using uid instead of entity
+     * @param type WorldEventType type of request
+     * @param uid int unique id of entity
+     */
+    public WorldAPIRequest(WorldEventType type, int uid) {
+        this(type, WorldAPI.getEntity(uid));
+    }
+
     public enum WorldEventType {
         DELETE_ENTITY,
         ADD_ENTITY,

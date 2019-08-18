@@ -1,4 +1,4 @@
-package com.worldwarofants.game.logic.species;
+package com.worldwarofants.game.logic.players.species;
 
 public class AntSpecies {
     // TODO species team. (lemi this is your chance for compositions or what ever)

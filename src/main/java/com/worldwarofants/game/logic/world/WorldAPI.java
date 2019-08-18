@@ -48,6 +48,16 @@ public class WorldAPI {
     }
 
     /**
+     * Return list of entities at a specific position
+     * @param posX x position of entities
+     * @param posY y position of entities
+     * @return ArrayList of world entities at defined position
+     */
+    public static ArrayList<WorldEntity> getEntitiesAtPosition(int posX, int posY) {
+        return getEntitiesFromFilter(entity -> entity.getPosX() == posX && entity.getPosY() == posY);
+    }
+
+    /**
      * Get colony api wrapper controlled by a player. Also acts as an example how to use getEntitiesFromFilter()
      * @param playerNumber player id that owns the colony
      * @return WorldColonyWrapper object that has same .playerNumber parameter as playerNumber

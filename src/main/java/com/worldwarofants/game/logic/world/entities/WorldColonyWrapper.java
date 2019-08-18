@@ -1,6 +1,6 @@
 package com.worldwarofants.game.logic.world.entities;
 
-import com.worldwarofants.game.logic.colony.Colony;
+import com.worldwarofants.game.logic.players.colony.Colony;
 import com.worldwarofants.game.logic.world.WorldEntity;
 
 public class WorldColonyWrapper extends WorldEntity {

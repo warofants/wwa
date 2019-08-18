@@ -1,4 +1,4 @@
-package com.worldwarofants.game.logic.colony;
+package com.worldwarofants.game.logic.players.colony;
 
 public class Colony {
     private int playerNumber;

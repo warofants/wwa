@@ -1,6 +1,6 @@
 package com.worldwarofants.game;
 
-import com.worldwarofants.game.io.MainMenu;
+import com.worldwarofants.game.io.menus.MainMenu;
 
 public class Main {
     public static void main(String[] args) {

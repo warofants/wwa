@@ -1,9 +1,9 @@
 package com.worldwarofants.game.logic.players;
 
-import com.worldwarofants.game.logic.colony.Colony;
-import com.worldwarofants.game.logic.moves.antgroups.AntGroup;
-import com.worldwarofants.game.logic.moves.antgroups.AttackGroup;
-import com.worldwarofants.game.logic.species.AntSpecies;
+import com.worldwarofants.game.logic.players.colony.Colony;
+import com.worldwarofants.game.logic.players.antgroups.AntGroup;
+import com.worldwarofants.game.logic.players.antgroups.AttackGroup;
+import com.worldwarofants.game.logic.players.species.AntSpecies;
 import com.worldwarofants.game.logic.world.WorldEntity;
 
 import java.util.ArrayList;
@@ -54,15 +54,15 @@ public class AntPlayer {
      * Create new attack party object and add to antGroups[]
      * @return reference to attack party object
      */
-    public AttackGroup createAttackGroup() {
-        // TODO: create party with stats
-        AttackGroup attackGroup = new AttackGroup();
+        public AttackGroup createAttackGroup() {
+            // TODO: create group with stats
+            AttackGroup attackGroup = new AttackGroup();
 
-        // Add attack party to list of ant groups
-        antGroups.add(attackGroup);
+            // Add attack party to list of ant groups
+            antGroups.add(attackGroup);
 
-        return attackGroup;
-    }
+            return attackGroup;
+        }
     /**
      * Create new attack party object and add to antGroups[]
      * @return reference to attack party object

@@ -4,10 +4,10 @@ import com.worldwarofants.game.logic.intelligence.WildMoveMaker;
 import com.worldwarofants.game.logic.intelligence.ai.AntAI;
 import com.worldwarofants.game.logic.intelligence.Human;
 import com.worldwarofants.game.logic.intelligence.AntMoveMaker;
+import com.worldwarofants.game.logic.intelligence.ai.WildAI;
 import com.worldwarofants.game.logic.players.AntPlayer;
 import com.worldwarofants.game.logic.players.WildPlayer;
-import com.worldwarofants.game.logic.species.AntSpecies;
-import com.worldwarofants.game.logic.world.World;
+import com.worldwarofants.game.logic.players.species.AntSpecies;
 import com.worldwarofants.game.logic.world.WorldAPI;
 import com.worldwarofants.game.logic.world.WorldAPIRequest;
 import com.worldwarofants.game.logic.world.entities.WorldColonyWrapper;
@@ -18,17 +18,19 @@ public class Game {
     private AntPlayer[] antPlayers;
     private AntMoveMaker[] intelligences;
 
-    public WildPlayer[] wildPlayers;
-    public WildMoveMaker[] wildIntelligences;
+    private WildPlayer[] wildPlayers;
+    private WildMoveMaker[] wildIntelligences;
 
-    private int numberOfPlayers;
+    private int numberOfAntPlayers;
+    private int numberOfWildPlayers;
 
     private int tickCounter;
     private int turnCounter;
 
     //TODO Save-Load team needs to write constructors for a new game and a load game
-    public Game(int numberOfPlayers) {
-        this.numberOfPlayers = numberOfPlayers;
+    public Game(int numberOfAntPlayers, int numberOfWildPlayers) {
+        this.numberOfAntPlayers = numberOfAntPlayers;
+        this.numberOfWildPlayers = numberOfWildPlayers;
     }
 
     public void start() {
@@ -37,12 +39,16 @@ public class Game {
         turnCounter = 0;
 
         // Create players instances
-        initializePlayer();
+        initializeAntPlayers();
+        // Create wild players instances
+        initializeWildPlayers();
+
         // Create world instance
         initializeWorld();
 
         // While the game isn't over
         while (!isFinished()) {
+            System.out.println("Making move " + turnCounter);
             // Make move
             playTurns();
         }
@@ -54,21 +60,33 @@ public class Game {
     /**
      * Create players instances
      */
-    public void initializePlayer() {
-        antPlayers = new AntPlayer[numberOfPlayers];
-        intelligences = new AntMoveMaker[numberOfPlayers];
+    private void initializeAntPlayers() {
+        antPlayers = new AntPlayer[numberOfAntPlayers];
+        intelligences = new AntMoveMaker[numberOfAntPlayers];
 
-        for (int i = 0; i < numberOfPlayers; i++) {
+        for (int i = 0; i < numberOfAntPlayers; i++) {
             // Create new antPlayers
             boolean isHuman = i == 0;
             antPlayers[i] = new AntPlayer(new AntSpecies(), isHuman, i);
 
             if (isHuman) {
-                // TODO: An AntSpecies instance with values should be feed as an input to initializePlayer
+                // Todo an AntSpecies type should be required when creating player
                 intelligences[i] = new Human(antPlayers[i]);
             } else {
                 intelligences[i] = new AntAI(antPlayers[i]);
             }
+        }
+    }
+
+    private void initializeWildPlayers() {
+        wildPlayers = new WildPlayer[numberOfWildPlayers];
+        wildIntelligences = new WildMoveMaker[numberOfWildPlayers];
+
+        for (int i = 0; i < numberOfWildPlayers; i++) {
+            // Create new wildPlayers
+            // Todo A WildSpecies type should be required when creating player
+            wildPlayers[i] = new WildPlayer();
+            wildIntelligences[i] = new WildAI(wildPlayers[i]);
         }
     }
 
@@ -94,6 +112,9 @@ public class Game {
                 System.err.println("API CALL FAILED: call failed trying to make colony" + request.toString());
             }
         }
+
+        // TODO: Wild players should be added
+        // TODO: Obstacles / terrain elements should be generated
     }
 
     /**
@@ -114,7 +135,7 @@ public class Game {
             }
 
             // TODO: Values team update ant values after players turn
-            updateAntState(intelligence);
+            updateStateAntPlayer(intelligence);
 
             // increment game time
             tick();
@@ -143,15 +164,17 @@ public class Game {
         addTurn();
     }
 
-    private void updateAntState(AntMoveMaker intelligence) {
+    private void updateStateAntPlayer(AntMoveMaker intelligence) {
         // TODO: Update player values
-
         // For example decrease population by 5%
         intelligence.getAntPlayer().scalePopulation(0.95);
+
+        // TODO: move AntGroup objects in the world
+        // TODO: update fog of war
     }
 
     private void updateWildState(WildMoveMaker wildIntelligence) {
-        // TODO: Update wild player values
+        // TODO: wild player logic (ant eaters, wasps, humans, etc)
     }
 
     /**
@@ -160,7 +183,6 @@ public class Game {
      * @return list of action to apply to the world
      */
     private ArrayList<WorldAPIRequest> antMove(AntMoveMaker intelligence) {
-        // TODO make antMove should return list of changes to world object
         return intelligence.makeMove();
     }
 
@@ -170,7 +192,6 @@ public class Game {
      * @return list of action to apply to the world
      */
     private ArrayList<WorldAPIRequest> wildMove(WildMoveMaker wildIntelligence) {
-        // TODO make antMove should return list of changes to world object
         return wildIntelligence.makeMove();
     }
 
@@ -192,6 +213,6 @@ public class Game {
      * Check if the game has reached end condition
      */
     private boolean isFinished() {
-        return true;
+        return turnCounter > 10;
     }
 }

@@ -1,5 +1,7 @@
 package com.worldwarofants.game.logic.world;
 
+import org.junit.Test;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.function.Predicate;
@@ -8,13 +10,13 @@ public class World {
     // HashMap storing World Entities
     private HashMap<Integer, WorldEntity> worldEntities;
 
-    private int height, width;
+    private int width, height;
 
-    public World(int height, int width) {
+    public World(int width, int height) {
         worldEntities = new HashMap<>();
 
-        this.height = height;
         this.width = width;
+        this.height = height;
     }
 
     /**
@@ -25,11 +27,10 @@ public class World {
      * @return if entity is added
      */
     boolean addWorldEntity(WorldEntity entity) {
-        // A uid of 0 get replaced with random uid
-        if (entity.getUid() == 0) {
+        // A uid of less than or equal to 0 must get replaced with random uid
+        if (entity.getUid() <= 0) {
             entity.setUid(getNewUID());
         }
-
 
         if (entity.getPosX() == -1 && entity.getPosY() == -1) {
             setRandomPosition(entity);
@@ -65,6 +66,7 @@ public class World {
      */
     boolean putWorldEntity(WorldEntity updated) {
         // Check if entity is in bounds
+
         if (isOutOfBounds(updated)) {
             return false;
         }
@@ -125,25 +127,14 @@ public class World {
      * Set position of entity to a random spot.
      * 0 <= x <= width
      * 0 <= y <= height
-     * @param entity Entity whose position to be changed
+     * @param entity entity to update
      */
     private void setRandomPosition(WorldEntity entity) {
         int x = (int) (Math.random() * this.width);
         int y = (int) (Math.random() * this.height);
 
-        // Check each other entity
-        for (WorldEntity e : worldEntities.values()) {
-            // For over lapping position
-            if (e.getPosX() == x && e.getPosY() == y) {
-                // Recursively look for a new position
-                setRandomPosition(entity);
-                break;
-            } else {
-                // Set position
-                entity.setPosX(x);
-                entity.setPosY(y);
-            }
-        }
+        entity.setPosX(x);
+        entity.setPosY(y);
     }
 
     /**
@@ -152,7 +143,6 @@ public class World {
      * @return if entity is in bounds
      */
     private boolean isOutOfBounds(WorldEntity entity) {
-        return entity.getPosX() >= 0 && entity.getPosX() <= width && entity.getPosY() >= 0 && entity.getPosY() <= height;
+        return entity.getPosX() < 0 || entity.getPosX() > width || entity.getPosY() < 0 || entity.getPosY() > height;
     }
-
 }

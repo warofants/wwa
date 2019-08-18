@@ -13,6 +13,6 @@ public class AntAI extends AntMoveMaker {
 
     @Override
     public ArrayList<WorldAPIRequest> makeMove() {
-        return null;
+        return new ArrayList<>();
     }
 }

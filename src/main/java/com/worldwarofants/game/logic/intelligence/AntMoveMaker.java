@@ -1,6 +1,6 @@
 package com.worldwarofants.game.logic.intelligence;
 
-import com.worldwarofants.game.logic.moves.antgroups.AttackGroup;
+import com.worldwarofants.game.logic.players.antgroups.AttackGroup;
 import com.worldwarofants.game.logic.players.AntPlayer;
 import com.worldwarofants.game.logic.world.WorldAPI;
 import com.worldwarofants.game.logic.world.WorldAPIRequest;
@@ -50,16 +50,15 @@ public abstract class AntMoveMaker {
                 colonyWrapper.getPosY(), // antgroup starts on colony y
                 0, // uid of 0 will cause a random uid to be chosen (you should always use 0)
                 attackGroup // Attack group object we're wrapping
+                // TODO: Ant groups should be created with a target in mind.
         );
 
         // Create the request with...
-        WorldAPIRequest request = new WorldAPIRequest(
+        return new WorldAPIRequest(
                 // Request type (add entity)
                 WorldAPIRequest.WorldEventType.ADD_ENTITY,
                 // Request entity
                 wrapper
         );
-
-        return request;
     }
 }
