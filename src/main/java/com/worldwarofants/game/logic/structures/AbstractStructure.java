@@ -2,22 +2,21 @@ package com.worldwarofants.game.logic.structures;
 
 public abstract class AbstractStructure{
 	private float hp;
-	private float resourceAmount; //how much resource created per tick
-	private float storageAmount; //how much max storage structure provides
 	private boolean isUpgradable; //if current structure is upgradable
-	private String resourceType; //what will the structure produce
+	private String resourceType; //what resource will the structure be used for
 	private int xCoor, yCoor; //(x,y) coordinates
 	private int id; //unique strucutre id
 
+	public AbstractStructure(float hp, boolean isUpgradable, String resourceType, int xCoor, int yCoor, int id){
+		this.hp = hp;
+		this.isUpgradable = isUpgradable;
+		this.resourceType = resourceType;
+		this.xCoor = xCoor;
+		this.yCoor = yCoor;
+		this.id = id;
+	}
+
 	//getters and setters
-	public float getResourceAmount(){
-		return resourceAmount;
-	}
-
-	public void setResourceAmount(float resourceAmount){
-		this.resourceAmount = resourceAmount;
-	}
-
 	public String getResourceType(){
 		return resourceType;
 	}
