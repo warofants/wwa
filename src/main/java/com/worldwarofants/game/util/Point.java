@@ -27,7 +27,7 @@ public class Point {
     * @param b Second point.
     * @return Float with the distance between two points
     */
-    public static double findDistanceBetweenTwoPoints(Point a, Point b) {
+    public static float findDistanceBetweenTwoPoints(Point a, Point b) {
         // (X2 - X1)
         float dx = b.x - a.x;
         // (Y2 - Y1)
@@ -35,7 +35,7 @@ public class Point {
         // (X2 - X1)^2 + (Y2 - Y1)^2
         double sqrsum = Math.pow(dx, 2) + Math.pow(dy, 2);
         // Square root of everything
-        double distance = Math.sqrt(sqrsum);
+        float distance = (float) Math.sqrt(sqrsum);
         return distance;
     }
 }
