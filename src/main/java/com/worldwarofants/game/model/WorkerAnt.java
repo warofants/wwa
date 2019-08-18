@@ -1,7 +1,5 @@
-package com.worldwarofants.game.logic;
+package com.worldwarofants.game.model;
 
 public class WorkerAnt extends Ant {
-
-
 
 }

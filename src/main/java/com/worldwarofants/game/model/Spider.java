@@ -1,4 +1,4 @@
-package com.worldwarofants.game.logic;
+package com.worldwarofants.game.model;
 
 public class Spider extends Entity {
 
