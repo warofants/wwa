@@ -1,7 +1,5 @@
 package com.worldwarofants.game.logic.world;
 
-import org.junit.Test;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.function.Predicate;
