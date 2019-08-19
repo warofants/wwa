@@ -9,6 +9,7 @@ This tutorial assumes that you already have a working VSC setup and java plugins
     - [What did you just do?](#what-did-you-just-do)
   - [How do I work with this?](#how-do-i-work-with-this)
   - [Basic overview how git works.](#basic-overview-how-git-works)
+- [Creating a pull request](#creating-a-pull-request)
 
 
 
@@ -60,8 +61,31 @@ All in all it works like this:
 - To commit click the "check mark" a dialogue will appear asking you what to name this commit, be descriptive or we will lose track very quickly of what goes where. Later if something breaks we can make sure where to look by checking the commit names and what files they touched. ![commit dialog](pics/git_commit.png).
   - The commit message will be typed into a box saying "Commit message" in the middle top of the screen in VSC, this is easy to miss. ![commit message](pics/commit_msg.png)
 - I will type into the message "adding guide for git and fork usage + pictures, practical example"
-- 
+- Now the data has been committed and the version is now synchronized, you will noticed the "U" missing in the file explorer, this was the desired effect. These changes are now only "local" on your machine, in order to push them into your git fork repository, you will need to click the 3 dots on the top right on the git tab and select push. Later on if you are working on other branches you can select "push to" in order to put it onto another branch than master, for now your fork should only have a master branch as is. ![git push](pics/git_push.png)
+
+- As before with the commit message VSC will prompt you to enter your github username and password.
+- After which you can see your changes on your fork of github. ![git fork changes](pics/git_fork_changes.png)
 
 
+Congratulations! You have just made your first project change! 
+This process will become second nature soon enough.
+Now there is a lot I have ignored for simplicities sake, if you have some questions ask the mentors. E.G. i did not get into details about branches, merging etc.
 
 Please note that it is impossible to "stage/commit too much" the smaller the incremental steps between versions the better. Now it is not necessary to edit a file and commit each line separately, but adding 40 files with 40k+ lines und the name "changes" is very unhelpful and will most likely not get approved to merge into the main project.
+
+## Creating a pull request
+
+If you want to get your code reviewed and maybe added to the main project (as i do with this guide)
+
+We can do that via github.
+- On the same horizontal line as "Clone or download" on your github fork, is a button called "New pull request", if you are _certain_ and have _made extra sure_ that all your files have been added to the commit you want to add to the main project, click it. ![git pull request creation](pics/git_pull_request.png)
+- It will show all changes, gloss over it and check if it all looks about right, if you have worked cleanly before you do not need to read every single line you have edited.
+- Click the green button "Create pull request"
+- Give it a title and describe what you have done, for a rule of thumb the title of your pull request should be usable in a sentence.
+  - for the description be as thorough as you think is necessary, as before there is no "too much information" but don't write huge essays, if you think you need to you might commit too much at once and should split the load off into smaller changes. Remember that a pull request will merge the _current_ state of your fork with the main project, so it is not a problem if you have made a lot of commits over years, git will check that there are no conflicts with the merge, if there are please message a moderator since this can be a bit complicated.
+- I will call it "Adding usage and setup guide for forks and git" and will add in the description "also adding lots of pictures for clarity".
+- done
+
+Pull requests need to be reviewed by someone before they are merged, so a lot of pull requests generate a ton of work for mentors, please do not spam requests at us as it will slow us down and DDOS our other tasks.
+
+After making a pull request, shoot your mentor a message. so we don't lose complete track.
