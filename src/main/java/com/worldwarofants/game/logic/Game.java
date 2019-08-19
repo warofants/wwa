@@ -118,7 +118,7 @@ public class Game {
     }
 
     /**
-     * Make moves for each player and wild NPC
+     * Make actions for each player and wild NPC
      */
     private void playTurns() {
         for (AntMoveMaker intelligence: intelligences) {

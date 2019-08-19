@@ -20,7 +20,7 @@ public class Human extends AntMoveMaker {
         // List of API requests the player will call
         ArrayList<WorldAPIRequest> requests = new ArrayList<>();
 
-        // TODO: Switch state for different moves
+        // TODO: Switch state for different actions
 
         // Follow this example how to create a new AttackGroup entity
         requests.add(createAttackGroup());
