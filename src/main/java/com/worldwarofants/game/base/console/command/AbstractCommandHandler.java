@@ -1,6 +1,6 @@
 package com.worldwarofants.game.base.console.command;
 
-import com.worldwarofants.game.base.AbstractView;
+import com.worldwarofants.game.base.AbstractController;
 
 import java.util.Comparator;
 import java.util.Map;
@@ -9,24 +9,24 @@ import java.util.TreeMap;
 /**
  * TODO write docs
  *
- * @param <View>
+ * @param <Controller>
  * @author Veradux
  */
-public abstract class AbstractCommandHandler<View extends AbstractView> {
+public abstract class AbstractCommandHandler<Controller extends AbstractController> {
 
-    protected View view;
-    private Map<String, ICommand<View>> commands;
+    protected Controller controller;
+    private Map<String, ICommand<Controller>> commands;
 
-    public AbstractCommandHandler(View view) {
-        this.view = view;
-        commands = new TreeMap<String, ICommand<View>>(Comparator.naturalOrder());
+    public AbstractCommandHandler(Controller controller) {
+        this.controller = controller;
+        commands = new TreeMap<>(Comparator.naturalOrder());
     }
 
     public void executeCommandByName(String commandName) {
-        commands.get(commandName).execute(view);
+        commands.get(commandName).execute(controller);
     }
 
-    public void addCommand(String commandName, ICommand<View> command) {
+    public void addCommand(String commandName, ICommand<Controller> command) {
         commands.put(commandName, command);
     }
 }

@@ -1,9 +1,9 @@
 package com.worldwarofants.game.base.console.command;
 
-import com.worldwarofants.game.base.AbstractView;
+import com.worldwarofants.game.base.AbstractController;
 
-public interface ICommand<View extends AbstractView> {
+public interface ICommand<Controller extends AbstractController> {
 
-    public void execute(View view);
+    void execute(Controller controller);
 
 }
