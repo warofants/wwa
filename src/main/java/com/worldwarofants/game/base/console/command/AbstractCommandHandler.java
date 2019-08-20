@@ -18,8 +18,9 @@ public abstract class AbstractCommandHandler<Controller extends AbstractControll
     private static final String NAME_AND_ARGS_DIVIDER = " ";
     private static final int COMMAND_NAME_POSITION = 0;
     private static final int COMMAND_ARGS_START_INDEX = 1;
+    private static final String INVALID_COMMAND_MESSAGE = "Invalid, try again.";
 
-    protected Controller controller;
+    private Controller controller;
     private Map<String, ICommand<Controller>> commands;
 
     public AbstractCommandHandler(Controller controller) {
@@ -35,6 +36,12 @@ public abstract class AbstractCommandHandler<Controller extends AbstractControll
 
         if (commands.containsKey(commandName)) {
             commands.get(commandName).execute(controller, arguments);
+        }
+        else {
+            // This line might not be final.
+            // It depends on how the views are implemented to show their content,
+            // because it might get in the way. If it does, it will be changed.
+            System.out.println(INVALID_COMMAND_MESSAGE);
         }
     }
 
