@@ -3,6 +3,11 @@ package com.worldwarofants.game.base;
 import com.worldwarofants.game.base.console.command.AbstractCommandHandler;
 import com.worldwarofants.game.model.World;
 
+/**
+ * TODO add docs
+ * @param <CommandHandler>
+ * @author Veradux
+ */
 public abstract class AbstractModule<CommandHandler extends AbstractCommandHandler> {
 
     private CommandHandler commandHandler;

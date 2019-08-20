@@ -2,6 +2,11 @@ package com.worldwarofants.game.base;
 
 import com.worldwarofants.game.model.World;
 
+/**
+ * TODO add docs
+ * @param <View>
+ * @author Veradux
+ */
 public abstract class AbstractController<View extends AbstractView> {
 
     protected World world;

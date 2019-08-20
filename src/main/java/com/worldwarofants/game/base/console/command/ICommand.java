@@ -2,6 +2,10 @@ package com.worldwarofants.game.base.console.command;
 
 import com.worldwarofants.game.base.AbstractController;
 
+/**
+ * TODO add docs
+ * @param <Controller>
+ */
 public interface ICommand<Controller extends AbstractController> {
 
     void execute(Controller controller, String[] arguments);
