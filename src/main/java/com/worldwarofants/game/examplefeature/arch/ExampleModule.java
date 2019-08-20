@@ -14,7 +14,6 @@ public class ExampleModule extends AbstractModule<ExampleCommandHandler> {
         ExampleViewModel viewModel = new ExampleViewModel();
         ExampleView view = new ExampleView(viewModel);
         ExampleController controller = new ExampleController(view, world);
-        ExampleCommandHandler handler = new ExampleCommandHandler(controller);
-        return handler;
+        return new ExampleCommandHandler(controller);
     }
 }

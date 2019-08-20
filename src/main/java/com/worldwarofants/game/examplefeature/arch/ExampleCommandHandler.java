@@ -9,7 +9,7 @@ class ExampleCommandHandler extends AbstractCommandHandler<ExampleController> {
 
     private static final String EXAMPLE_COMMAND_NAME = "example";
 
-    public ExampleCommandHandler(ExampleController controller) {
+    ExampleCommandHandler(ExampleController controller) {
         super(controller);
     }
 

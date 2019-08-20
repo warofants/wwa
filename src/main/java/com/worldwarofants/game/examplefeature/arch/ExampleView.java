@@ -4,7 +4,7 @@ import com.worldwarofants.game.base.AbstractView;
 
 class ExampleView extends AbstractView<ExampleViewModel> {
 
-    public ExampleView(ExampleViewModel viewModel) {
+    ExampleView(ExampleViewModel viewModel) {
         super(viewModel);
     }
 
