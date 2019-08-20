@@ -8,7 +8,11 @@ class ExampleView extends AbstractView<ExampleViewModel> {
         super(viewModel);
     }
 
-    public void showExample(String[] args) {
-        System.out.println("Example " + args[0]);
+    public void showAllAnts() {
+        StringBuilder antsString = new StringBuilder();
+        getViewModel().getAntNames().forEach(name -> antsString.append(name).append(", "));
+
+        String trimmedAntsString = antsString.toString().substring(0, antsString.length() - 2);
+        System.out.println(trimmedAntsString);
     }
 }
