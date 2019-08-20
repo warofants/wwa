@@ -1,12 +1,14 @@
 package com.worldwarofants.game.arch.console.command;
 
 import com.worldwarofants.game.arch.AbstractController;
+import com.worldwarofants.game.arch.module.AbstractModule;
 
 /**
  * ICommand is used to describe what a console command does.
  * More specifically, which Controller method/methods it calls.
  * If the command has arguments, they will also be passed on to the controller.
  *
+ * @see AbstractController
  * @author Veradux
  */
 public interface ICommand<Controller extends AbstractController> {
@@ -31,6 +33,8 @@ public interface ICommand<Controller extends AbstractController> {
      * @param controller The controller of the module, to which this command belongs to.
      * @param arguments The arguments supplied by the player for this specific command.
      *
+     * @see AbstractController
+     * @see AbstractModule#executeCommand
      * @author Veradux
      */
     void execute(Controller controller, String[] arguments);

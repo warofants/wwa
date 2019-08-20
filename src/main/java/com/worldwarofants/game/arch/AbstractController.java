@@ -13,6 +13,7 @@ import com.worldwarofants.game.model.World;
  *  The way the controller's methods are used is through player Commands.
  *  Each command should be responsible for one method. </p>
  *
+ * @see AbstractView
  * @see ICommand
  * @author Veradux
  */
@@ -30,10 +31,12 @@ public abstract class AbstractController<View extends AbstractView> {
 
     /**
      * Use this method to change the current Module in the game.
-     * Let's say for example that you wanted to go
-     * from the ScoutingScreenController to the CombatScreenController.
+     * Let's say for example that you wanted to go from
+     * the ScoutingScreenController to the CombatScreenController.
      * To achieve that, you would need to use this method inside of the ScoutingController,
      * like this: <code> navigateTo(ModuleName.COMBAT) </code>
+     *
+     * @see ModuleNavigator
      */
     protected void navigateTo(ModuleName moduleName) {
         moduleNavigator.navigateTo(moduleName);

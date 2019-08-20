@@ -1,6 +1,7 @@
 package com.worldwarofants.game.arch.console.command;
 
 import com.worldwarofants.game.arch.AbstractController;
+import com.worldwarofants.game.arch.module.AbstractModule;
 
 import java.util.Arrays;
 import java.util.Comparator;
@@ -8,9 +9,13 @@ import java.util.Map;
 import java.util.TreeMap;
 
 /**
- * TODO write docs
+ * The CommandHandler is just a container for the commands in that specific Module.
+ * Whenever the player sends their input, it will be sent to this Handler.
+ * The Handler will look for a command which matches the input.
+ * When the command is found, it will be executed.
  *
- * @param <Controller>
+ * @see ICommand
+ * @see AbstractModule
  * @author Veradux
  */
 public abstract class AbstractCommandHandler<Controller extends AbstractController> {
@@ -47,13 +52,11 @@ public abstract class AbstractCommandHandler<Controller extends AbstractControll
 
     /**
      * <p> There are two ways to add commands inside of this method,
-     * depending on which you find more suitable.</p>
+     * depending on which you find more suitable. </p>
      * <p>
-     *
      * 1. <code> commands.put(COMMAND_NAME, (ExampleController::method)); </code>
      * You can specify which method of the controller the command should execute like this.
      * This way is preferred if the command is a simple one, without many arguments. </p>
-     *
      * <p>
      * 2. <code> commands.put(ReproduceCommand.COMMAND_NAME, new Command()); </code>
      * You can create the new Command as an object, and pass it like this.
