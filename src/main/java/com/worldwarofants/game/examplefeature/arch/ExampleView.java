@@ -8,7 +8,7 @@ class ExampleView extends AbstractView<ExampleViewModel> {
         super(viewModel);
     }
 
-    public void show() {
-        System.out.println("Example");
+    public void showExample(String[] args) {
+        System.out.println("Example " + args[0]);
     }
 }

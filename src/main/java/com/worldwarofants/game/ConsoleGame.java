@@ -1,6 +1,8 @@
 package com.worldwarofants.game;
 
 import com.worldwarofants.game.examplefeature.arch.ExampleModule;
+import com.worldwarofants.game.model.World;
+import com.worldwarofants.game.model.WorldMock;
 
 import java.util.Scanner;
 
@@ -16,17 +18,18 @@ class ConsoleGame {
 
     ConsoleGame() {
         scanner = new Scanner(System.in);
-        example = new ExampleModule();
+        // TODO replace WorldMock() with the Actual World that will be used
+        World world = new WorldMock();
+        example = new ExampleModule(world);
     }
 
     public void run() {
         while (true) {
-            String input = readInput();
-            example.executeCommandByName(input);
+            example.executeCommand(readInput());
         }
     }
 
     private String readInput() {
-        return scanner.nextLine().toLowerCase();
+        return scanner.nextLine().trim().toLowerCase();
     }
 }

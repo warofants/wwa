@@ -4,6 +4,6 @@ import com.worldwarofants.game.base.AbstractController;
 
 public interface ICommand<Controller extends AbstractController> {
 
-    void execute(Controller controller);
+    void execute(Controller controller, String[] arguments);
 
 }

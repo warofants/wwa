@@ -1,18 +1,20 @@
 package com.worldwarofants.game.examplefeature.arch;
 
 import com.worldwarofants.game.base.AbstractModule;
+import com.worldwarofants.game.model.World;
 
 public class ExampleModule extends AbstractModule<ExampleCommandHandler> {
 
-    private static final String EXAMPLE_COMMAND_NAME = "example command";
+    public ExampleModule(World world) {
+        super(world);
+    }
 
     @Override
-    protected ExampleCommandHandler setInstance() {
+    protected ExampleCommandHandler initDependencies() {
         ExampleViewModel viewModel = new ExampleViewModel();
         ExampleView view = new ExampleView(viewModel);
-        ExampleController controller = new ExampleController(view);
+        ExampleController controller = new ExampleController(view, world);
         ExampleCommandHandler handler = new ExampleCommandHandler(controller);
-        handler.addCommand(EXAMPLE_COMMAND_NAME, ExampleController::showView);
         return handler;
     }
 }

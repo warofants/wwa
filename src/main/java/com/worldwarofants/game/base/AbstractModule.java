@@ -1,19 +1,21 @@
 package com.worldwarofants.game.base;
 
 import com.worldwarofants.game.base.console.command.AbstractCommandHandler;
+import com.worldwarofants.game.model.World;
 
-public abstract class AbstractModule<Handler extends AbstractCommandHandler> {
+public abstract class AbstractModule<CommandHandler extends AbstractCommandHandler> {
 
-    private Handler instance;
+    private CommandHandler commandHandler;
+    protected World world;
 
-    public AbstractModule() {
-        instance = setInstance();
+    public AbstractModule(World world) {
+        this.world = world;
+        commandHandler = initDependencies();
     }
 
-    public void executeCommandByName(String commandName) {
-        instance.executeCommandByName(commandName);
+    public void executeCommand(String input) {
+        commandHandler.executeCommand(input);
     }
 
-    protected abstract Handler setInstance();
-
+    protected abstract CommandHandler initDependencies();
 }
