@@ -1,12 +1,11 @@
 package com.worldwarofants.game.examplefeature.arch;
 
 import com.worldwarofants.game.arch.module.AbstractModule;
+import com.worldwarofants.game.arch.module.ModuleName;
 import com.worldwarofants.game.arch.module.ModuleNavigator;
 import com.worldwarofants.game.model.World;
 
 public class ExampleModule extends AbstractModule<ExampleCommandHandler> {
-
-    private static final String MODULE_NAME = "Example";
 
     public ExampleModule(World world, ModuleNavigator navigator) {
         super(world, navigator);
@@ -21,7 +20,7 @@ public class ExampleModule extends AbstractModule<ExampleCommandHandler> {
     }
 
     @Override
-    public String getModuleName() {
-        return MODULE_NAME;
+    public ModuleName getModuleName() {
+        return ModuleName.EXAMPLE;
     }
 }

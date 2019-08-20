@@ -1,6 +1,7 @@
 package com.worldwarofants.game.arch;
 
 import com.worldwarofants.game.arch.module.ModuleNavigator;
+import com.worldwarofants.game.arch.module.ModuleName;
 import com.worldwarofants.game.model.World;
 
 /**
@@ -10,9 +11,9 @@ import com.worldwarofants.game.model.World;
  */
 public abstract class AbstractController<View extends AbstractView> {
 
+    private ModuleNavigator moduleNavigator;
     protected World world;
     protected View view;
-    private ModuleNavigator moduleNavigator;
 
     public AbstractController(View view, World world, ModuleNavigator navigator) {
         this.world = world;
@@ -20,7 +21,7 @@ public abstract class AbstractController<View extends AbstractView> {
         this.moduleNavigator = navigator;
     }
 
-    protected void navigateTo(String moduleName) {
+    protected void navigateTo(ModuleName moduleName) {
         moduleNavigator.navigateTo(moduleName);
     }
 }

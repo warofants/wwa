@@ -9,7 +9,9 @@ import com.worldwarofants.game.model.WorldMock;
 import java.util.Scanner;
 
 /**
- * TODO write docs
+ * The ConsoleGame class is the one that controls the main game loop.
+ * It is where console commands come in, and are executed.
+ * This is also where you set up the game modules.
  *
  * @author Veradux
  */
@@ -22,17 +24,6 @@ class ConsoleGame extends ModuleManager {
         scanner = new Scanner(System.in);
         // TODO replace WorldMock() with World(), once architecture is approved.
         world = new WorldMock();
-        defineModules();
-    }
-
-    @Override
-    protected AbstractModule defineStartingModule() {
-        return new ExampleModule(world, this);
-    }
-
-    private void defineModules() {
-        // Whenever you create a new Module, add it to the game like this.
-        addModule(new ExampleModule(world, this));
     }
 
     public void run() {
@@ -42,6 +33,19 @@ class ConsoleGame extends ModuleManager {
             // This is how to let the user execute commands.
             currentModule.executeCommand(readInput());
         }
+    }
+
+    @Override
+    protected AbstractModule defineStartingModule() {
+        return new ExampleModule(world, this);
+    }
+
+    /**
+     * Whenever you create a new Module, add it to the game like this.
+     */
+    @Override
+    protected void defineModules() {
+        addModule(new ExampleModule(world, this));
     }
 
     private String readInput() {
