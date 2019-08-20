@@ -49,6 +49,7 @@ public abstract class AbstractCommandHandler<Controller extends AbstractControll
      * <p> There are two ways to add commands inside of this method,
      * depending on which you find more suitable.</p>
      * <p>
+     *
      * 1. <code> commands.put(COMMAND_NAME, (ExampleController::method)); </code>
      * You can specify which method of the controller the command should execute like this.
      * This way is preferred if the command is a simple one, without many arguments. </p>
@@ -59,7 +60,8 @@ public abstract class AbstractCommandHandler<Controller extends AbstractControll
      * This way is preferred if the command has a lot of arguments.
      * Because you can put the constants related to them
      * in their specific command class that they belong go. </p>
-     * @param commands
+     *
+     * @author Veradux
      */
     protected abstract void defineCommands(Map<String, ICommand<Controller>> commands);
 

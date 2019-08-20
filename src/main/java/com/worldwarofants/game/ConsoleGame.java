@@ -1,5 +1,6 @@
 package com.worldwarofants.game;
 
+import com.worldwarofants.game.arch.module.AbstractModule;
 import com.worldwarofants.game.arch.module.ModuleManager;
 import com.worldwarofants.game.examplefeature.arch.ExampleModule;
 import com.worldwarofants.game.model.World;
@@ -15,29 +16,30 @@ import java.util.Scanner;
 class ConsoleGame extends ModuleManager {
 
     private Scanner scanner;
-    // TODO make a connection between modules
-    private ExampleModule example;
-    private ExampleModule example2;
-    private ExampleModule currentModule;
+    private World world;
 
     ConsoleGame() {
         scanner = new Scanner(System.in);
         // TODO replace WorldMock() with World(), once architecture is approved.
-        World world = new WorldMock();
-        example = new ExampleModule(world);
-        example2 = new ExampleModule(world);
-        currentModule = defineStartingModule(world);
+        world = new WorldMock();
+        defineModules();
     }
 
-    private ExampleModule defineStartingModule(World world) {
-        return new ExampleModule(world);
+    @Override
+    public AbstractModule defineStartingModule() {
+        return new ExampleModule(world, this);
+    }
+
+    private void defineModules() {
+        // Whenever you create a new Module, add it to the game like this.
+        addModule(new ExampleModule(world, this));
     }
 
     public void run() {
-        // This is how you can manually execute commands.
+        // This is how to manually execute commands.
         currentModule.executeCommand("gameTitle");
         while (true) {
-            // This is how you can let the user execute commands.
+            // This is how to let the user execute commands.
             currentModule.executeCommand(readInput());
         }
     }

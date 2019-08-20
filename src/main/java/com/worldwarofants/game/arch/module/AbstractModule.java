@@ -12,9 +12,11 @@ public abstract class AbstractModule<CommandHandler extends AbstractCommandHandl
 
     private CommandHandler commandHandler;
     protected World world;
+    protected ModuleNavigator navigator;
 
-    public AbstractModule(World world) {
+    public AbstractModule(World world, ModuleNavigator navigator) {
         this.world = world;
+        this.navigator = navigator;
         commandHandler = initDependencies();
     }
 
