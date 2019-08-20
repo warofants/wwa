@@ -1,6 +1,7 @@
 package com.worldwarofants.game.examplefeature.arch;
 
 import com.worldwarofants.game.arch.AbstractController;
+import com.worldwarofants.game.arch.module.ModuleNavigator;
 import com.worldwarofants.game.model.ExampleAnt;
 import com.worldwarofants.game.model.World;
 
@@ -9,8 +10,8 @@ import java.util.stream.Collectors;
 
 class ExampleController extends AbstractController<ExampleView> {
 
-    ExampleController(ExampleView view, World world) {
-        super(view, world);
+    ExampleController(ExampleView view, World world, ModuleNavigator navigator) {
+        super(view, world, navigator);
     }
 
     void reproduce(String[] arguments) {
