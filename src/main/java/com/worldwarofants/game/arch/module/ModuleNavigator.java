@@ -1,6 +1,6 @@
 package com.worldwarofants.game.arch.module;
 
-public interface Navigator {
+public interface ModuleNavigator {
 
     void navigateTo(String moduleName);
 }

@@ -26,7 +26,7 @@ class ConsoleGame extends ModuleManager {
     }
 
     @Override
-    public AbstractModule defineStartingModule() {
+    protected AbstractModule defineStartingModule() {
         return new ExampleModule(world, this);
     }
 
