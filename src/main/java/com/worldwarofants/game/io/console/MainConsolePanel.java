@@ -21,6 +21,7 @@ class MainConsolePanel extends JPanel {
     MainConsolePanel(int rows, int columns) {
         super(new BorderLayout());
 
+        //TODO: Set gameText line wrap to max col len
         gameText = new JTextPane();
         gameText.setBackground(Color.BLACK);
         gameText.setForeground(Color.GREEN);
@@ -33,15 +34,23 @@ class MainConsolePanel extends JPanel {
                     public void actionPerformed(ActionEvent e) {
                         //Handles user input
                         //TODO: Implement when input handler created
+                        gameText.setText(userInputField.getText());
                     }
                 }
         );
 
-        header = new JLabel("Header");
+        header = new JLabel(getHeaderText());
 
         add(header, BorderLayout.PAGE_START);
         add(gameText, BorderLayout.CENTER);
         add(userInputField, BorderLayout.PAGE_END);
     }
-
+    String getHeaderText() {
+        //TODO: Grab these values via getter
+        String headerText = String.format(
+                "Prestige: %d, Resources: %d",
+                null,null
+        );
+        return headerText;
+    }
 }
