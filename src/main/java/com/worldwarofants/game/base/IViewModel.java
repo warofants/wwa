@@ -8,6 +8,6 @@ package com.worldwarofants.game.base;
  *
  * @author Veradux
  */
-public abstract class AbstractViewModel {
+public interface IViewModel {
 
 }

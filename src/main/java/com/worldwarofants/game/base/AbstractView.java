@@ -5,11 +5,11 @@ package com.worldwarofants.game.base;
  * They mainly print and read.
  * Views should preferably be used only in the Controller classes.
  * If possible, separate views by "screens"/stages of the game.
- * For example, HomeScreenView, SettingsScreenView, ScoutingScreenView.
+ * For example, HomeScreenView, CombatScreenView, ScoutingScreenView.
  *
  * @author Veradux
  */
-public abstract class AbstractView<VM extends AbstractViewModel> {
+public abstract class AbstractView<VM extends IViewModel> {
 
     private VM viewModel;
 
