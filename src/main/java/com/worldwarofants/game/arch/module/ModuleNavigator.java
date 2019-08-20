@@ -14,7 +14,8 @@ public interface ModuleNavigator {
 
     /**
      * Use this method to change the current Module in the game.
-     * Let's say for example that you wanted to go from the ScoutingScreen to the CombatScreen.
+     * Let's say for example that you wanted to go
+     * from the ScoutingScreenController to the CombatScreenController.
      * To achieve that, you would need to use this method inside of the ScoutingController,
      * like this: <code> navigateTo(ModuleName.COMBAT) </code>
      */

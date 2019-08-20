@@ -26,7 +26,7 @@ public interface ICommand<Controller extends AbstractController> {
      * "move left", or "move 4 2", 4 being X and 2 being Y.
      * The arguments are contained in an array of Strings.
      * When the player inputs their command, the text is split by spaces.
-     * The first word is the actual command, while the others are considered as arguments. </p>
+     * The first word is the command name, while the others are considered as arguments. </p>
      *
      * @param controller The controller of the module, to which this command belongs to.
      * @param arguments The arguments supplied by the player for this specific command.
@@ -34,5 +34,4 @@ public interface ICommand<Controller extends AbstractController> {
      * @author Veradux
      */
     void execute(Controller controller, String[] arguments);
-
 }
