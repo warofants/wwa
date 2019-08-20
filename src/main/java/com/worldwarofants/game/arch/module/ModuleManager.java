@@ -25,7 +25,8 @@ public abstract class ModuleManager implements ModuleNavigator {
     /**
      * This method is used to set up the module from which the game starts.
      * You do not have to use <code>addModule(new Module())</code>,
-     * before returning the starting module, because that is already done for you.
+     * before returning the starting module.
+     * Because that is already done for you.
      */
     protected abstract AbstractModule defineStartingModule();
 
