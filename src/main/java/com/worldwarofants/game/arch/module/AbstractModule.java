@@ -23,4 +23,6 @@ public abstract class AbstractModule<CommandHandler extends AbstractCommandHandl
     }
 
     protected abstract CommandHandler initDependencies();
+
+    public abstract String getModuleName();
 }
