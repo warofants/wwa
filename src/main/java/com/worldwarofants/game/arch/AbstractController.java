@@ -1,4 +1,4 @@
-package com.worldwarofants.game.base;
+package com.worldwarofants.game.arch;
 
 import com.worldwarofants.game.model.World;
 

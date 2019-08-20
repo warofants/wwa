@@ -1,6 +1,6 @@
-package com.worldwarofants.game.base.console.command;
+package com.worldwarofants.game.arch.console.command;
 
-import com.worldwarofants.game.base.AbstractController;
+import com.worldwarofants.game.arch.AbstractController;
 
 /**
  * TODO add docs

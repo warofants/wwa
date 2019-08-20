@@ -1,4 +1,4 @@
-package com.worldwarofants.game.base;
+package com.worldwarofants.game.arch;
 
 /**
  * View Models are the objects that are given to the views.

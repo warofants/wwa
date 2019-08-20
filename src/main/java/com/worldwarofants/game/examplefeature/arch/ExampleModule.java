@@ -1,6 +1,6 @@
 package com.worldwarofants.game.examplefeature.arch;
 
-import com.worldwarofants.game.base.AbstractModule;
+import com.worldwarofants.game.arch.module.AbstractModule;
 import com.worldwarofants.game.model.World;
 
 public class ExampleModule extends AbstractModule<ExampleCommandHandler> {

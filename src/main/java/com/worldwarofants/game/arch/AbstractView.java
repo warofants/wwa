@@ -1,4 +1,4 @@
-package com.worldwarofants.game.base;
+package com.worldwarofants.game.arch;
 
 /**
  * Views are the classes responsible for interacting with the console.

@@ -1,7 +1,7 @@
 package com.worldwarofants.game.examplefeature.arch;
 
-import com.worldwarofants.game.base.console.command.AbstractCommandHandler;
-import com.worldwarofants.game.base.console.command.ICommand;
+import com.worldwarofants.game.arch.console.command.AbstractCommandHandler;
+import com.worldwarofants.game.arch.console.command.ICommand;
 
 import java.util.Map;
 

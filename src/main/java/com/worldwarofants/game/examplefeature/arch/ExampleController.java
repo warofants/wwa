@@ -1,6 +1,6 @@
 package com.worldwarofants.game.examplefeature.arch;
 
-import com.worldwarofants.game.base.AbstractController;
+import com.worldwarofants.game.arch.AbstractController;
 import com.worldwarofants.game.model.ExampleAnt;
 import com.worldwarofants.game.model.World;
 

@@ -1,6 +1,6 @@
 package com.worldwarofants.game.examplefeature.arch;
 
-import com.worldwarofants.game.base.console.command.ICommand;
+import com.worldwarofants.game.arch.console.command.ICommand;
 
 class ReproduceCommand implements ICommand<ExampleController> {
 

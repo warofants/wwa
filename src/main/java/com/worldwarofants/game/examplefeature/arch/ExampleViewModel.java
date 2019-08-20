@@ -1,6 +1,6 @@
 package com.worldwarofants.game.examplefeature.arch;
 
-import com.worldwarofants.game.base.IViewModel;
+import com.worldwarofants.game.arch.IViewModel;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,6 +1,6 @@
 package com.worldwarofants.game.examplefeature.arch;
 
-import com.worldwarofants.game.base.AbstractView;
+import com.worldwarofants.game.arch.AbstractView;
 
 class ExampleView extends AbstractView<ExampleViewModel> {
 
