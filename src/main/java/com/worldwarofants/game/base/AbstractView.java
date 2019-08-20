@@ -11,9 +11,13 @@ package com.worldwarofants.game.base;
  */
 public abstract class AbstractView<VM extends AbstractViewModel> {
 
-    protected VM viewModel;
+    private VM viewModel;
 
     public AbstractView(VM viewModel) {
         this.viewModel = viewModel;
+    }
+
+    public VM getViewModel() {
+        return viewModel;
     }
 }
