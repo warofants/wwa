@@ -8,7 +8,6 @@ import java.util.Map;
 class ExampleCommandHandler extends AbstractCommandHandler<ExampleController> {
 
     private static final String COMMAND_SHOW_ANTS = "showAnts";
-    private static final String COMMAND_REPRODUCE = "reproduce";
 
     ExampleCommandHandler(ExampleController controller) {
         super(controller);
@@ -17,6 +16,6 @@ class ExampleCommandHandler extends AbstractCommandHandler<ExampleController> {
     @Override
     protected void defineCommands(Map<String, ICommand<ExampleController>> commands) {
         commands.put(COMMAND_SHOW_ANTS, (ExampleController::showAllAnts));
-        commands.put(COMMAND_REPRODUCE, new ReproduceCommand());
+        commands.put(ReproduceCommand.COMMAND_NAME, new ReproduceCommand());
     }
 }
