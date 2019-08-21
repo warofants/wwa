@@ -20,11 +20,19 @@ public abstract class ModuleManager {
 
     protected ModuleManager() {
         modules = new TreeMap<>();
+        initDatabase();
         IModuleNavigator moduleNavigator = (moduleName -> currentModule = modules.get(moduleName));
         currentModule = defineStartingModule(moduleNavigator);
         defineModules(moduleNavigator);
         addModule(currentModule);
     }
+
+    /**
+     * Create the World here, and save it to a property.
+     * This allows the World be created before the other objects
+     * that depend on the World are created.
+     */
+    protected abstract void initDatabase();
 
     /**
      * Whenever a new module is created, it should be added in the game through this method.

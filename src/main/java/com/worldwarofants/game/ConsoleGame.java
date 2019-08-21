@@ -19,13 +19,11 @@ import java.util.Scanner;
  */
 class ConsoleGame extends ModuleManager {
 
-    private Scanner scanner;
+    private final Scanner scanner;
     private World world;
 
     ConsoleGame() {
         scanner = new Scanner(System.in);
-        // TODO replace WorldMock() with World(), once architecture is approved.
-        world = new WorldMock();
     }
 
     /**
@@ -39,6 +37,7 @@ class ConsoleGame extends ModuleManager {
     public void run() {
         // This is how to manually execute commands.
         // Here will be placed the opening command of the game.
+        // TODO impl command
         currentModule.executeCommand("gameTitle");
 
         // TODO implement a way to end the game loop.
@@ -58,6 +57,13 @@ class ConsoleGame extends ModuleManager {
     protected void defineModules(IModuleNavigator navigator) {
         addModule(new ExampleModule(world, navigator));
     }
+
+    @Override
+    protected void initDatabase() {
+        // TODO replace WorldMock() with World(), once architecture is approved.
+        world = new WorldMock();
+    }
+
 
     private String readInput() {
         return scanner.nextLine().trim();
