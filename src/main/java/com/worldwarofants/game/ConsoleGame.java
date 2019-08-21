@@ -1,7 +1,9 @@
 package com.worldwarofants.game;
 
+import com.worldwarofants.game.arch.AbstractController;
 import com.worldwarofants.game.arch.module.AbstractModule;
 import com.worldwarofants.game.arch.module.ModuleManager;
+import com.worldwarofants.game.arch.module.ModuleNavigator;
 import com.worldwarofants.game.examplefeature.arch.ExampleModule;
 import com.worldwarofants.game.model.World;
 import com.worldwarofants.game.model.WorldMock;
@@ -26,26 +28,35 @@ class ConsoleGame extends ModuleManager {
         world = new WorldMock();
     }
 
+    /**
+     * This is the main game loop.
+     * It keeps track of the current Module.
+     * The current Module is the last one to which a Controller has navigated to.
+     *
+     * @see ModuleNavigator
+     * @see AbstractController
+     */
     public void run() {
         // This is how to manually execute commands.
+        // Here will be placed the opening command of the game.
         currentModule.executeCommand("gameTitle");
+
+        // TODO implement a way to end the game loop.
         while (true) {
             // This is how to let the user execute commands.
+            // Nothing else will need to be added here.
             currentModule.executeCommand(readInput());
         }
     }
 
     @Override
-    protected AbstractModule defineStartingModule() {
-        return new ExampleModule(world, this);
+    protected AbstractModule defineStartingModule(ModuleNavigator navigator) {
+        return new ExampleModule(world, navigator);
     }
 
-    /**
-     * Whenever you create a new Module, add it to the game like this.
-     */
     @Override
-    protected void defineModules() {
-        addModule(new ExampleModule(world, this));
+    protected void defineModules(ModuleNavigator navigator) {
+        addModule(new ExampleModule(world, navigator));
     }
 
     private String readInput() {
