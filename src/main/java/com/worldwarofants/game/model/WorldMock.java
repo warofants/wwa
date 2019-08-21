@@ -1,7 +1,6 @@
 package com.worldwarofants.game.model;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -17,13 +16,13 @@ public class WorldMock extends World {
 
     public WorldMock() {
         super();
-        ants = initFirstAnts();
+        ants = new ArrayList<>();
+        initFirstAnts();
     }
 
-    private List<ExampleAnt> initFirstAnts() {
-        ExampleAnt charlie = new ExampleAnt("charlie");
-        ExampleAnt eve = new ExampleAnt("eve");
-        return new ArrayList<>(Arrays.asList(charlie, eve));
+    private void initFirstAnts() {
+        ants.add(new ExampleAnt("charlie"));
+        ants.add(new ExampleAnt("eve"));
     }
 
     @Override
