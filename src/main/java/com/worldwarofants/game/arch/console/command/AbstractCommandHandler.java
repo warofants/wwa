@@ -25,8 +25,8 @@ public abstract class AbstractCommandHandler<Controller extends AbstractControll
     private static final int COMMAND_ARGS_START_INDEX = 1;
     private static final String INVALID_COMMAND_MESSAGE = "Invalid, try again.";
 
-    private Controller controller;
-    private Map<String, ICommand<Controller>> commands;
+    private final Controller controller;
+    private final Map<String, ICommand<Controller>> commands;
 
     public AbstractCommandHandler(Controller controller) {
         this.controller = controller;

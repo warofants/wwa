@@ -12,6 +12,9 @@ import com.worldwarofants.game.model.World;
  * <p>
  *  The way the controller's methods are used is through player Commands.
  *  Each command should be responsible for one method. </p>
+ *  <p>
+ *  Note that even if the command does not have arguments,
+ *  the controller method must still have the String[] arguments parameter. </p>
  *
  * @see AbstractView
  * @see ICommand
@@ -19,9 +22,9 @@ import com.worldwarofants.game.model.World;
  */
 public abstract class AbstractController<View extends AbstractView> {
 
-    private IModuleNavigator moduleNavigator;
-    protected World world;
-    protected View view;
+    private final IModuleNavigator moduleNavigator;
+    protected final World world;
+    protected final View view;
 
     public AbstractController(View view, World world, IModuleNavigator navigator) {
         this.world = world;
