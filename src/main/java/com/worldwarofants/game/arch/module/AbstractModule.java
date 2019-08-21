@@ -1,14 +1,19 @@
 package com.worldwarofants.game.arch.module;
 
-import com.worldwarofants.game.arch.AbstractController;
 import com.worldwarofants.game.arch.console.command.AbstractCommandHandler;
 import com.worldwarofants.game.arch.console.command.ICommand;
 import com.worldwarofants.game.model.World;
 
 /**
- * The Module is what is used to keep all of the different components connected.
+ * <p>
+ * The Module is what is used to keep all of the different components of a feature connected.
  * Think of each Module like a container for a specific feature.
- * For example, MainMenuModule, CombatModule, ScoutingModule.
+ * For example, MainMenuModule, CombatModule, ScoutingModule. </p>
+ * <p>
+ * For the more advanced readers:
+ * This class is necessary because it allows inversion of control for the components.
+ * Without it, an external dependency injection framework would have been needed instead.
+ * </p>
  *
  * @author Veradux
  */
