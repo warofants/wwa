@@ -12,7 +12,9 @@ class ExampleView extends AbstractView<ExampleViewModel> {
         StringBuilder antsString = new StringBuilder();
         getViewModel().getAntNames().forEach(name -> antsString.append(name).append(", "));
 
-        String trimmedAntsString = antsString.toString().substring(0, antsString.length() - 2);
-        System.out.println(trimmedAntsString);
+        if (antsString.length() > 2) {
+            String trimmedAntsString = antsString.toString().substring(0, antsString.length() - 2);
+            System.out.println(trimmedAntsString);
+        }
     }
 }
