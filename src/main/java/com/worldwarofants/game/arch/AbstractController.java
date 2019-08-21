@@ -1,7 +1,7 @@
 package com.worldwarofants.game.arch;
 
 import com.worldwarofants.game.arch.console.command.ICommand;
-import com.worldwarofants.game.arch.module.ModuleNavigator;
+import com.worldwarofants.game.arch.module.IModuleNavigator;
 import com.worldwarofants.game.arch.module.ModuleName;
 import com.worldwarofants.game.model.World;
 
@@ -19,11 +19,11 @@ import com.worldwarofants.game.model.World;
  */
 public abstract class AbstractController<View extends AbstractView> {
 
-    private ModuleNavigator moduleNavigator;
+    private IModuleNavigator moduleNavigator;
     protected World world;
     protected View view;
 
-    public AbstractController(View view, World world, ModuleNavigator navigator) {
+    public AbstractController(View view, World world, IModuleNavigator navigator) {
         this.world = world;
         this.view = view;
         this.moduleNavigator = navigator;
@@ -36,7 +36,7 @@ public abstract class AbstractController<View extends AbstractView> {
      * To achieve that, you would need to use this method inside of the ScoutingController,
      * like this: <code> navigateTo(ModuleName.COMBAT) </code>
      *
-     * @see ModuleNavigator
+     * @see IModuleNavigator
      */
     protected void navigateTo(ModuleName moduleName) {
         moduleNavigator.navigateTo(moduleName);

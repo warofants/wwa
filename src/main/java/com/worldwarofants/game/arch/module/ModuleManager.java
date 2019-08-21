@@ -9,7 +9,7 @@ import java.util.TreeMap;
  * That is done using <code> navigateTo(moduleName); </code> in the Controllers.
  *
  * @see AbstractModule
- * @see ModuleNavigator
+ * @see IModuleNavigator
  *
  * @author Veradux
  */
@@ -20,7 +20,7 @@ public abstract class ModuleManager {
 
     protected ModuleManager() {
         modules = new TreeMap<>();
-        ModuleNavigator moduleNavigator = (moduleName -> currentModule = modules.get(moduleName));
+        IModuleNavigator moduleNavigator = (moduleName -> currentModule = modules.get(moduleName));
         currentModule = defineStartingModule(moduleNavigator);
         defineModules(moduleNavigator);
         addModule(currentModule);
@@ -31,7 +31,7 @@ public abstract class ModuleManager {
      * That is done using <code>addModule(new Module())</code>.
      * Remember, adding the starting Module here is not necessary.
      */
-    protected abstract void defineModules(ModuleNavigator navigator);
+    protected abstract void defineModules(IModuleNavigator navigator);
 
     /**
      * This method is used to set up the module from which the game starts.
@@ -39,7 +39,7 @@ public abstract class ModuleManager {
      * before returning the starting module.
      * Because that is already done for you.
      */
-    protected abstract AbstractModule defineStartingModule(ModuleNavigator navigator);
+    protected abstract AbstractModule defineStartingModule(IModuleNavigator navigator);
 
     protected void addModule(AbstractModule module) {
         modules.put(module.getModuleName(), module);

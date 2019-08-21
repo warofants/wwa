@@ -10,7 +10,7 @@ package com.worldwarofants.game.arch.module;
  *
  * @author Veradux
  */
-public interface ModuleNavigator {
+public interface IModuleNavigator {
 
     /**
      * Use this method to change the current Module in the game.

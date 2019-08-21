@@ -2,12 +2,12 @@ package com.worldwarofants.game.examplefeature.arch;
 
 import com.worldwarofants.game.arch.module.AbstractModule;
 import com.worldwarofants.game.arch.module.ModuleName;
-import com.worldwarofants.game.arch.module.ModuleNavigator;
+import com.worldwarofants.game.arch.module.IModuleNavigator;
 import com.worldwarofants.game.model.World;
 
 public class ExampleModule extends AbstractModule<ExampleCommandHandler> {
 
-    public ExampleModule(World world, ModuleNavigator navigator) {
+    public ExampleModule(World world, IModuleNavigator navigator) {
         super(world, navigator);
     }
 

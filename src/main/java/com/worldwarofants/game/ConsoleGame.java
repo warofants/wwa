@@ -3,7 +3,7 @@ package com.worldwarofants.game;
 import com.worldwarofants.game.arch.AbstractController;
 import com.worldwarofants.game.arch.module.AbstractModule;
 import com.worldwarofants.game.arch.module.ModuleManager;
-import com.worldwarofants.game.arch.module.ModuleNavigator;
+import com.worldwarofants.game.arch.module.IModuleNavigator;
 import com.worldwarofants.game.examplefeature.arch.ExampleModule;
 import com.worldwarofants.game.model.World;
 import com.worldwarofants.game.model.WorldMock;
@@ -33,7 +33,7 @@ class ConsoleGame extends ModuleManager {
      * It keeps track of the current Module.
      * The current Module is the last one to which a Controller has navigated to.
      *
-     * @see ModuleNavigator
+     * @see IModuleNavigator
      * @see AbstractController
      */
     public void run() {
@@ -50,12 +50,12 @@ class ConsoleGame extends ModuleManager {
     }
 
     @Override
-    protected AbstractModule defineStartingModule(ModuleNavigator navigator) {
+    protected AbstractModule defineStartingModule(IModuleNavigator navigator) {
         return new ExampleModule(world, navigator);
     }
 
     @Override
-    protected void defineModules(ModuleNavigator navigator) {
+    protected void defineModules(IModuleNavigator navigator) {
         addModule(new ExampleModule(world, navigator));
     }
 
