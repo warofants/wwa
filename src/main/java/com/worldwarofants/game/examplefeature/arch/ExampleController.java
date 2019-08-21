@@ -32,6 +32,10 @@ class ExampleController extends AbstractController<ExampleView> {
         view.showAllAnts();
     }
 
+    void gameTitle(String[] arguments) {
+        view.showGameTitle();
+    }
+
     private List<String> getAntNames(List<ExampleAnt> ants) {
         return ants.stream()
                 .map(ExampleAnt::getName)

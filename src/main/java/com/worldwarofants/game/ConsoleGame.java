@@ -17,7 +17,9 @@ import java.util.Scanner;
  *
  * @author Veradux
  */
-class ConsoleGame extends ModuleManager {
+public class ConsoleGame extends ModuleManager {
+
+    public static final String COMMAND_SHOW_GAME_TITLE = "showTitle";
 
     private final Scanner scanner;
     private World world;
@@ -38,7 +40,7 @@ class ConsoleGame extends ModuleManager {
         // This is how to manually execute commands.
         // Here will be placed the opening command of the game.
         // TODO impl command
-        currentModule.executeCommand("gameTitle");
+        currentModule.executeCommand(COMMAND_SHOW_GAME_TITLE);
 
         // TODO implement a way to end the game loop.
         while (true) {
@@ -63,7 +65,6 @@ class ConsoleGame extends ModuleManager {
         // TODO replace WorldMock() with World(), once architecture is approved.
         world = new WorldMock();
     }
-
 
     private String readInput() {
         return scanner.nextLine().trim();
