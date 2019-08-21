@@ -21,7 +21,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.worldwarofants.game.Application</mainClass>
+                            <mainClass>com.worldwarofants.game.Main</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

@@ -1,8 +1,9 @@
 package com.worldwarofants.game;
 
-public class Application {
+public class Main {
 
     public static void main(String[] args) {
-        new ConsoleGame().run();
+        ConsoleGame game = new ConsoleGame();
+        game.run();
     }
 }
