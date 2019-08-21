@@ -22,10 +22,12 @@ class ExampleController extends AbstractController<ExampleView> {
         ExampleAnt child = parent.reproduce(childName);
         world.addAnt(child);
 
-        // Set up viewModel and update the view
         showAllAnts(arguments);
     }
 
+    /**
+     * This sets up the view model and updates the view
+     */
     void showAllAnts(String[] arguments) {
         List<String> antNames = getAntNames(world.getAllAnts());
         view.getViewModel().setAntNames(antNames);
