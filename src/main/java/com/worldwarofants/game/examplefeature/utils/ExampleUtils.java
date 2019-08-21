@@ -7,5 +7,5 @@ package com.worldwarofants.game.examplefeature.utils;
  */
 public class ExampleUtils {
     private final static String utilsClass =
-            "This is the package where I would put my utils classes, IF I HAD ANY (ಠ益ಠ)";
+            "This is the package where I would put my utils classes, IF I HAD ANY! (ಠ益ಠ)";
 }
