@@ -7,6 +7,7 @@ package com.worldwarofants.game.arch;
  * If possible, separate views by "screens"/stages of the game.
  * For example, HomeScreenView, CombatScreenView, ScoutingScreenView.
  *
+ * @see AbstractController
  * @author Veradux
  */
 public abstract class AbstractView<VM extends IViewModel> {
