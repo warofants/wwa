@@ -39,7 +39,6 @@ public class ConsoleGame extends ModuleManager {
     public void run() {
         // This is how to manually execute commands.
         // Here will be placed the opening command of the game.
-        // TODO impl command
         currentModule.executeCommand(COMMAND_SHOW_GAME_TITLE);
 
         // TODO implement a way to end the game loop.
