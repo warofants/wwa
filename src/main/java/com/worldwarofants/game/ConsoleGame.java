@@ -40,8 +40,7 @@ public class ConsoleGame extends ModuleManager {
         // execute the starting command in this module
         currentModule.start(null);
 
-        // TODO implement a way to end the game loop.
-        while (true) {
+        while (world.isGameRunning()) {
             // This is how to let the user execute commands.
             // Nothing else will need to be added here.
             currentModule.executeCommand(readInput());

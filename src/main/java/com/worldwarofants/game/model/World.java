@@ -1,5 +1,7 @@
 package com.worldwarofants.game.model;
 
+import com.worldwarofants.game.ConsoleGame;
+
 import java.util.List;
 
 /**
@@ -17,6 +19,8 @@ import java.util.List;
  * @see com.worldwarofants.game.arch.AbstractView
  */
 public class World {
+
+    private boolean isGameRunning = true;
 
     /**
      * Method that is mocked by WorldMock.
@@ -40,5 +44,23 @@ public class World {
      */
     public List<ExampleAnt> getAllAnts() {
         return null;
+    }
+
+    /**
+     * This is used in the main game loop to check if it should keep looping.
+     *
+     * @see ConsoleGame
+     */
+    public boolean isGameRunning() {
+        return isGameRunning;
+    }
+
+    /**
+     * Call this when you think the main game loop should stop.
+     *
+     * @see ConsoleGame
+     */
+    public void gameOver() {
+        isGameRunning = false;
     }
 }
