@@ -21,7 +21,7 @@ public abstract class ModuleManager {
     protected ModuleManager() {
         modules = new TreeMap<>();
         initDatabase();
-        IModuleNavigator moduleNavigator = (moduleName -> currentModule = modules.get(moduleName));
+        IModuleNavigator moduleNavigator = initNavigator();
         currentModule = defineStartingModule(moduleNavigator);
         defineModules(moduleNavigator);
         addModule(currentModule);
@@ -51,5 +51,12 @@ public abstract class ModuleManager {
 
     protected void addModule(AbstractModule module) {
         modules.put(module.getModuleName(), module);
+    }
+
+    private IModuleNavigator initNavigator() {
+        return (moduleName, arguments) -> {
+            currentModule = modules.get(moduleName);
+            currentModule.start(arguments);
+        };
     }
 }

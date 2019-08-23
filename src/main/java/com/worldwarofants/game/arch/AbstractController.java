@@ -37,11 +37,11 @@ public abstract class AbstractController<View extends AbstractView> {
      * Let's say for example that you wanted to go from
      * the ScoutingScreenController to the CombatScreenController.
      * To achieve that, you would need to use this method inside of the ScoutingController,
-     * like this: <code> navigateTo(ModuleName.COMBAT) </code>
+     * like this: <code> navigateTo(ModuleName.COMBAT, arguments) </code>
      *
      * @see IModuleNavigator
      */
-    protected void navigateTo(ModuleName moduleName) {
-        moduleNavigator.navigateTo(moduleName);
+    protected void navigateTo(ModuleName moduleName, String[] arguments) {
+        moduleNavigator.navigateTo(moduleName, arguments);
     }
 }

@@ -2,6 +2,8 @@ package com.worldwarofants.game.arch.console.command;
 
 import com.worldwarofants.game.arch.AbstractController;
 import com.worldwarofants.game.arch.module.AbstractModule;
+import com.worldwarofants.game.arch.module.IModuleNavigator;
+import com.worldwarofants.game.arch.module.ModuleName;
 
 import java.util.Arrays;
 import java.util.Comparator;
@@ -68,4 +70,16 @@ public abstract class AbstractCommandHandler<Controller extends AbstractControll
      */
     protected abstract void defineCommands(Map<String, ICommand<Controller>> commands);
 
+    /**
+     * This method runs whenever you navigate to a module.
+     * It executes the starting command defined in the command handler of that module.
+     *
+     * @param arguments the arguments passed in from the navigateTo method.
+     * Those arguments can be the ones from the player's previous input,
+     * or altered by the controller for some specific case.
+     *
+     * @see IModuleNavigator#navigateTo(ModuleName, String[])
+     * @see AbstractModule
+     */
+    public abstract void executeStartingCommand(String[] arguments);
 }

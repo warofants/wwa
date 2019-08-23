@@ -30,6 +30,28 @@ public abstract class AbstractModule<CommandHandler extends AbstractCommandHandl
     }
 
     /**
+     * This is the main reason for modules to exist.
+     * This is where you create all of the components in the architecture.
+     * In it, you have to create a ViewModel, View, Controller, and a CommandHandler.
+     * Then you just return that command handler.
+     */
+    protected abstract CommandHandler initDependencies();
+
+    /**
+     * This method runs whenever you navigate to a module.
+     * It executes the starting command defined in the command handler of that module.
+     *
+     * @param arguments the arguments passed in from the navigateTo method.
+     * Those arguments can be the ones from the player's previous input,
+     * or altered by the controller for some specific case.
+     *
+     * @see IModuleNavigator#navigateTo(ModuleName, String[])
+     */
+    public void start(String[] arguments) {
+        commandHandler.executeStartingCommand(arguments);
+    }
+
+    /**
      * <p>
      * Whenever the player inputs text into the console,
      * a command which matches the text is executed through this method. </p>
@@ -52,8 +74,6 @@ public abstract class AbstractModule<CommandHandler extends AbstractCommandHandl
     public void executeCommand(String input) {
         commandHandler.executeCommand(input);
     }
-
-    protected abstract CommandHandler initDependencies();
 
     public abstract ModuleName getModuleName();
 }

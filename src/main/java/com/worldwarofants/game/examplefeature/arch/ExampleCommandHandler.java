@@ -17,8 +17,13 @@ class ExampleCommandHandler extends AbstractCommandHandler<ExampleController> {
 
     @Override
     protected void defineCommands(Map<String, ICommand<ExampleController>> commands) {
+        commands.put(COMMAND_SHOW_GAME_TITLE, (ExampleController::gameTitle));
         commands.put(COMMAND_SHOW_ANTS, (ExampleController::showAllAnts));
         commands.put(ReproduceCommand.COMMAND_NAME, new ReproduceCommand());
-        commands.put(COMMAND_SHOW_GAME_TITLE, (ExampleController::gameTitle));
+    }
+
+    @Override
+    public void executeStartingCommand(String[] arguments) {
+        executeCommand(COMMAND_SHOW_GAME_TITLE + String.join(" ", arguments));
     }
 }
