@@ -1,7 +1,7 @@
 package com.worldwarofants.game.examplefeature.arch;
 
 import com.worldwarofants.game.arch.module.AbstractModule;
-import com.worldwarofants.game.arch.module.ModuleName;
+import com.worldwarofants.game.module.ModuleName;
 import com.worldwarofants.game.arch.module.IModuleNavigator;
 import com.worldwarofants.game.model.World;
 

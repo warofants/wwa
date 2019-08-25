@@ -1,5 +1,6 @@
 package com.worldwarofants.game.arch.module;
 
+import com.worldwarofants.game.module.ModuleName;
 import com.worldwarofants.game.arch.console.command.AbstractCommandHandler;
 import com.worldwarofants.game.arch.console.command.ICommand;
 import com.worldwarofants.game.model.World;

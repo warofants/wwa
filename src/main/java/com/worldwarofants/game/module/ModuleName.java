@@ -1,4 +1,4 @@
-package com.worldwarofants.game.arch.module;
+package com.worldwarofants.game.module;
 
 /**
  * Whenever a new module is created, its name should be written here.

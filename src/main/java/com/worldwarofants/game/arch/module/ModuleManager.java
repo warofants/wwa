@@ -1,5 +1,7 @@
 package com.worldwarofants.game.arch.module;
 
+import com.worldwarofants.game.module.ModuleName;
+
 import java.util.Map;
 import java.util.TreeMap;
 

@@ -1,5 +1,7 @@
 package com.worldwarofants.game.arch.module;
 
+import com.worldwarofants.game.module.ModuleName;
+
 /**
  * <p>
  * The ModuleNavigator is what Controllers use, to change the Modules of the game.
