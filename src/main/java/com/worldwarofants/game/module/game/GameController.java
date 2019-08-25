@@ -20,17 +20,9 @@ public class GameController extends AbstractController<GameView> {
 	public void startScouting() {
 		// TODO navigate to scouting module
 	}
-	
-	public void startSkirmish() {
-		//TODO navigate to skirmish module
-	}
-	
-	public void startRaid() {
-		//TODO navigate to raid module
-	}
-	
-	public void startInvasion() {
-		//TODO navigate to invasion module
+
+	public void startCombat() {
+		// TODO navigate to combat module
 	}
 	
 	public void startColonyManagement() {
