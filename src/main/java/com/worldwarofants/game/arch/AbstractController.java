@@ -3,11 +3,10 @@ package com.worldwarofants.game.arch;
 import com.worldwarofants.game.arch.console.command.ICommand;
 import com.worldwarofants.game.arch.module.IModuleNavigator;
 import com.worldwarofants.game.module.ModuleName;
-import com.worldwarofants.game.model.World;
 
 /**
  * <p> The Controller is the bridge between the World class and what the player will see on the screen.
- * It is responsible for getting what is needed from the World, and passing it to the view.
+ * It is responsible for getting what is needed from the World through Services, and passing it to the view.
  * The way it is passed to the view, is through the view's viewModel. </p>
  * <p>
  *  The way the controller's methods are used is through player Commands.
@@ -23,11 +22,9 @@ import com.worldwarofants.game.model.World;
 public abstract class AbstractController<View extends AbstractView> {
 
     private final IModuleNavigator moduleNavigator;
-    protected final World world;
     protected final View view;
 
-    public AbstractController(View view, World world, IModuleNavigator navigator) {
-        this.world = world;
+    public AbstractController(View view, IModuleNavigator navigator) {
         this.view = view;
         this.moduleNavigator = navigator;
     }

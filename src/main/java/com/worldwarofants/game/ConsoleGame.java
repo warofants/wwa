@@ -6,7 +6,6 @@ import com.worldwarofants.game.arch.module.ModuleManager;
 import com.worldwarofants.game.arch.module.IModuleNavigator;
 import com.worldwarofants.game.examplefeature.arch.ExampleModule;
 import com.worldwarofants.game.model.World;
-import com.worldwarofants.game.model.WorldMock;
 
 import java.util.Scanner;
 
@@ -59,8 +58,7 @@ public class ConsoleGame extends ModuleManager {
 
     @Override
     protected void initDatabase() {
-        // TODO replace WorldMock() with World(), once architecture is approved.
-        world = new WorldMock();
+        world = new World();
     }
 
     private String readInput() {
