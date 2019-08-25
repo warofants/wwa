@@ -6,5 +6,6 @@ package com.worldwarofants.game.module;
  */
 public enum ModuleName {
     EXAMPLE, 
-    HOMESCREEN
+    HOMESCREEN, 
+    PERSISTENCE
 }
