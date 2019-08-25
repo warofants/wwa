@@ -10,5 +10,6 @@ public enum ModuleName {
     PERSISTENCE, 
     NEW_GAME, 
     GAME, 
-    COMBAT
+    COMBAT, 
+    SCOUTING
 }

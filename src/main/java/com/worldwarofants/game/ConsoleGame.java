@@ -10,6 +10,7 @@ import com.worldwarofants.game.module.game.GameModule;
 import com.worldwarofants.game.module.homescreen.HomeScreenModule;
 import com.worldwarofants.game.module.newgame.NewGameModule;
 import com.worldwarofants.game.module.persistence.PersistenceModule;
+import com.worldwarofants.game.module.scouting.ScoutingModule;
 import com.worldwarofants.game.model.World;
 
 import java.util.Scanner;
@@ -64,6 +65,7 @@ public class ConsoleGame extends ModuleManager {
         addModule(new NewGameModule(world, navigator));
         addModule(new GameModule(world, navigator));
         addModule(new CombatModule(world, navigator));
+        addModule(new ScoutingModule(world, navigator));
     }
 
     @Override
