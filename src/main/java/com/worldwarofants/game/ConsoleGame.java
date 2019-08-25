@@ -13,6 +13,7 @@ import com.worldwarofants.game.module.homescreen.HomeScreenModule;
 import com.worldwarofants.game.module.newgame.NewGameModule;
 import com.worldwarofants.game.module.persistence.PersistenceModule;
 import com.worldwarofants.game.module.scouting.ScoutingModule;
+import com.worldwarofants.game.module.settings.SettingsModule;
 import com.worldwarofants.game.model.World;
 
 import java.util.Scanner;
@@ -62,8 +63,9 @@ public class ConsoleGame extends ModuleManager {
     @Override
     protected void defineModules(IModuleNavigator navigator) {
         addModule(new ExampleModule(world, navigator));
-        addModule(new HomeScreenModule(world, navigator));
         addModule(new PersistenceModule(world, navigator));
+        addModule(new SettingsModule(world, navigator));
+        addModule(new HomeScreenModule(world, navigator));
         addModule(new NewGameModule(world, navigator));
         addModule(new GameModule(world, navigator));
         addModule(new CombatModule(world, navigator));
