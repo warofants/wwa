@@ -3,7 +3,7 @@ package com.worldwarofants.game.logic;
 /**
  * Base class to extend logic objects off of
  */
- public class Entity {
+public class Entity {
 
     protected int health;
     protected int stamina;
