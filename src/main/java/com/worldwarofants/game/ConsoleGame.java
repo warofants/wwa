@@ -5,6 +5,7 @@ import com.worldwarofants.game.arch.module.AbstractModule;
 import com.worldwarofants.game.arch.module.ModuleManager;
 import com.worldwarofants.game.arch.module.IModuleNavigator;
 import com.worldwarofants.game.module.examplefeature.arch.ExampleModule;
+import com.worldwarofants.game.module.game.GameModule;
 import com.worldwarofants.game.module.homescreen.HomeScreenModule;
 import com.worldwarofants.game.module.newgame.NewGameModule;
 import com.worldwarofants.game.module.persistence.PersistenceModule;
@@ -60,6 +61,7 @@ public class ConsoleGame extends ModuleManager {
         addModule(new HomeScreenModule(world, navigator));
         addModule(new PersistenceModule(world, navigator));
         addModule(new NewGameModule(world, navigator));
+        addModule(new GameModule(world, navigator));
     }
 
     @Override

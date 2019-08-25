@@ -8,5 +8,6 @@ public enum ModuleName {
     EXAMPLE, 
     HOMESCREEN, 
     PERSISTENCE, 
-    NEW_GAME
+    NEW_GAME, 
+    GAME
 }
