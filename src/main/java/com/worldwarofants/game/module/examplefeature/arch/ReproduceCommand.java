@@ -1,4 +1,4 @@
-package com.worldwarofants.game.examplefeature.arch;
+package com.worldwarofants.game.module.examplefeature.arch;
 
 import com.worldwarofants.game.arch.console.command.ICommand;
 

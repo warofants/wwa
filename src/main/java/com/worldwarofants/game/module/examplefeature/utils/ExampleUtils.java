@@ -1,4 +1,4 @@
-package com.worldwarofants.game.examplefeature.utils;
+package com.worldwarofants.game.module.examplefeature.utils;
 
 /**
  * If you need to have any other classes than the ones needed by the architecture,

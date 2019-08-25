@@ -4,7 +4,7 @@ import com.worldwarofants.game.arch.AbstractController;
 import com.worldwarofants.game.arch.module.AbstractModule;
 import com.worldwarofants.game.arch.module.ModuleManager;
 import com.worldwarofants.game.arch.module.IModuleNavigator;
-import com.worldwarofants.game.examplefeature.arch.ExampleModule;
+import com.worldwarofants.game.module.examplefeature.arch.ExampleModule;
 import com.worldwarofants.game.model.World;
 
 import java.util.Scanner;
