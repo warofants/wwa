@@ -9,5 +9,6 @@ public enum ModuleName {
     HOMESCREEN, 
     PERSISTENCE, 
     NEW_GAME, 
-    GAME
+    GAME, 
+    COMBAT
 }
