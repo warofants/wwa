@@ -11,5 +11,6 @@ public enum ModuleName {
     NEW_GAME, 
     GAME, 
     COMBAT, 
-    SCOUTING
+    SCOUTING, 
+    COLONY_MANAGEMENT
 }

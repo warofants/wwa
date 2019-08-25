@@ -4,6 +4,8 @@ import com.worldwarofants.game.arch.AbstractController;
 import com.worldwarofants.game.arch.module.AbstractModule;
 import com.worldwarofants.game.arch.module.ModuleManager;
 import com.worldwarofants.game.arch.module.IModuleNavigator;
+import com.worldwarofants.game.module.colonymanagement.ColonyManagementCommandHandler;
+import com.worldwarofants.game.module.colonymanagement.ColonyManagementModule;
 import com.worldwarofants.game.module.combat.CombatModule;
 import com.worldwarofants.game.module.examplefeature.arch.ExampleModule;
 import com.worldwarofants.game.module.game.GameModule;
@@ -66,6 +68,7 @@ public class ConsoleGame extends ModuleManager {
         addModule(new GameModule(world, navigator));
         addModule(new CombatModule(world, navigator));
         addModule(new ScoutingModule(world, navigator));
+        addModule(new ColonyManagementModule(world, navigator));
     }
 
     @Override
