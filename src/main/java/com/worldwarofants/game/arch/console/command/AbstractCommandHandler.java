@@ -36,11 +36,24 @@ public abstract class AbstractCommandHandler<Controller extends AbstractControll
         defineCommands(commands);
     }
 
+    /**
+     * Use this method for command execution when the player is triggering the command,
+     * and you have not split the input yet.
+     * @param input the entire input received from the player
+     */
     public void executeCommand(String input) {
         String[] dividedInput = input.split(NAME_AND_ARGS_DIVIDER);
         String commandName = dividedInput[COMMAND_NAME_POSITION];
         String[] arguments = Arrays.copyOfRange(dividedInput, COMMAND_ARGS_START_INDEX, dividedInput.length);
 
+        executeCommand(commandName, arguments);
+    }
+
+    /**
+     * Use this method for manual execution of commands, when you know their name,
+     * and you are supplying the arguments in the code.
+     */
+    public void executeCommand(String commandName, String[] arguments) {
         if (commands.containsKey(commandName)) {
             commands.get(commandName).execute(controller, arguments);
         }

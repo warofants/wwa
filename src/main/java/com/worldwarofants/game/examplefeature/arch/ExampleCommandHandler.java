@@ -24,6 +24,6 @@ class ExampleCommandHandler extends AbstractCommandHandler<ExampleController> {
 
     @Override
     public void executeStartingCommand(String[] arguments) {
-        executeCommand(COMMAND_SHOW_GAME_TITLE + String.join(" ", arguments));
+        executeCommand(COMMAND_SHOW_GAME_TITLE, arguments);
     }
 }
