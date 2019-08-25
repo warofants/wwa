@@ -10,7 +10,7 @@ public class CommandParser{
     public Struct_Command parseCommand(string order_in){
 
         if (order_in.isEmpty("") || order_in.isEmpty(nullString)) {
-            throw new IllegalArgumentException("Input cannot be Null or Empty!")
+            throw new IllegalArgumentException("Input cannot be Null or Empty!");
         }
 
         //set fields of the command struct

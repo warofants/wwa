@@ -11,7 +11,7 @@ public class Struct_Command{
         DEFEND,
         QUIT;
     }
-    
+
     public COMMAND commandFunc;
     public string[] commandArgs;
     public int numArgs;
