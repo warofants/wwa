@@ -13,7 +13,7 @@ import java.util.Random;
  * @since 2019-08-15
  */
 
-public class RandomGenerator extends java.util.Random {
+public class RandomGenerator extends Random {
     private static final long serialVersionUID = -5378246343912387722L;
     private static final String VALID_LONG_REGEX = "-?\\d+(\\.\\d+)?";
 
@@ -55,8 +55,7 @@ public class RandomGenerator extends java.util.Random {
     }
 
     /**
-     * Generate an int in range If two ints are provided, use them to define a range
-     * If only one int is provided, range starts at 0. Range is START to END - 1.
+     * Generate an int in range defined by two ints, start and end.
      * 
      * @return int Returns a random integer.
      */
@@ -83,8 +82,7 @@ public class RandomGenerator extends java.util.Random {
     }
 
     /**
-     * Generate an int in range If two ints are provided, use them to define a range
-     * If only one int is provided, range starts at 0. Range is START to END - 1.
+     * Generate an int in range from 0 to end.
      * 
      * @return int Returns a random integer.
      */
