@@ -3,16 +3,16 @@ package com.worldwarofants.game.util;
 import java.util.Random;
 
 /**
-* Utility class that provides an abstraction of Java's Random class.
-* Its goal is to provide developers with a simple way to work with
-* random number generation, as well as allow for precise tweaking
-* of exact methods used.
-* Please make sure to generate your random numbers within the project
-* exclusively using this package.
-* @author Plat251
-* @version 1.0
-* @since 2019-08-15 
-*/
+ * Utility class that provides an abstraction of Java's Random class. Its goal
+ * is to provide developers with a simple way to work with random number
+ * generation, as well as allow for precise tweaking of exact methods used.
+ * Please make sure to generate your random numbers within the project
+ * exclusively using this package.
+ * 
+ * @author Plat251
+ * @version 1.0
+ * @since 2019-08-15
+ */
 
 public class RandomGenerator extends java.util.Random {
     private static final long serialVersionUID = -5378246343912387722L;
@@ -55,31 +55,40 @@ public class RandomGenerator extends java.util.Random {
         return this.seedString;
     }
 
-    /** 
-    * Generate an int in range
-    * If two ints are provided, use them to define a range
-    * If only one int is provided, range starts at 0.
-    * Range is START to END - 1.
-    * @return int Returns a random integer.
-    */
+    /**
+     * Generate an int in range If two ints are provided, use them to define a range
+     * If only one int is provided, range starts at 0. Range is START to END - 1.
+     * 
+     * @return int Returns a random integer.
+     */
     public int range(int start, int end) {
-        if (start > end) {
-            int swap = end;
-            end = start;
-            start = swap;
+        try {
+            if (start > end) {
+                throw new RangeStartGreaterThanRangeEndException("Range start int is greater than range end int!");
+            }
+            int randomNumber = this.generator.nextInt(end - start);
+            randomNumber += start;
+            return randomNumber;
+        } catch (RangeStartGreaterThanRangeEndException err) {
+            err.printStackTrace();
+            return 0;
         }
-        int randomNumber = this.generator.nextInt(end - start);
-        randomNumber += start;
-        return randomNumber;
+    }
+
+    class RangeStartGreaterThanRangeEndException extends Exception {
+        private static final long serialVersionUID = -1806262497608288018L;
+
+        RangeStartGreaterThanRangeEndException(String message) {
+            super(message);
+        }
     }
 
     /**
-    * Generate an int in range
-    * If two ints are provided, use them to define a range
-    * If only one int is provided, range starts at 0.
-    * Range is START to END - 1.
-    * @return int Returns a random integer.
-    */
+     * Generate an int in range If two ints are provided, use them to define a range
+     * If only one int is provided, range starts at 0. Range is START to END - 1.
+     * 
+     * @return int Returns a random integer.
+     */
     public int range(int end) {
         int randomNumber = this.generator.nextInt(end);
         return randomNumber;
