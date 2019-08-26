@@ -58,34 +58,19 @@ public class RandomGenerator extends Random {
      * Generate an int in range defined by two ints, start and end.
      * Start must be greater than end. Otherwise end will be returned.
      * 
-     * @return int Returns a random integer.
+     * @return int Returns a random integer between start and end.
      */
-    public int range(int start, int end) {
-        try {
+    public int getIntInRange(int start, int end) {
             if (start > end) {
-                throw new RangeStartGreaterThanRangeEndException("Range start int is greater than range end int!");
+                return end;
             }
             int randomNumber = this.generator.nextInt(end - start);
             randomNumber += start;
             return randomNumber;
-        } catch (RangeStartGreaterThanRangeEndException err) {
-            err.printStackTrace();
-            return end;
-        }
-    }
-
-    class RangeStartGreaterThanRangeEndException extends Exception {
-        private static final long serialVersionUID = -1806262497608288018L;
-
-        RangeStartGreaterThanRangeEndException(String message) {
-            super(message);
-        }
     }
 
     /**
-     * Generate an int in range from 0 to end.
-     * 
-     * @return int Returns a random integer.
+     * @return int an int in range from 0 to end.
      */
     public int getIntInRange(int end) {
         int randomNumber = this.generator.nextInt(end);
