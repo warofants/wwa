@@ -22,10 +22,10 @@ public class RandomGenerator extends Random {
     private String seedString;
 
     public RandomGenerator() {
-        this.generator = new Random(); // Create a generator
-        this.seed = generator.nextLong(); // Ask it to generate a seed for itself
-        this.seedString = Long.toString(this.seed); // Save it to seedString as well
-        this.generator.setSeed(seed); // And set its seed to what it produced
+        this.generator = new Random();
+        this.seed = generator.nextLong();
+        this.seedString = Long.toString(this.seed);
+        this.generator.setSeed(seed);
 
     }
 
