@@ -56,10 +56,11 @@ public class RandomGenerator extends Random {
 
     /**
      * Generate an int in range defined by two ints, start and end.
+     * Start must be greater than end. Otherwise end will be returned.
      * 
      * @return int Returns a random integer.
      */
-    public int getIntInRange(int start, int end) {
+    public int range(int start, int end) {
         try {
             if (start > end) {
                 throw new RangeStartGreaterThanRangeEndException("Range start int is greater than range end int!");
@@ -69,7 +70,7 @@ public class RandomGenerator extends Random {
             return randomNumber;
         } catch (RangeStartGreaterThanRangeEndException err) {
             err.printStackTrace();
-            return 0;
+            return end;
         }
     }
 
