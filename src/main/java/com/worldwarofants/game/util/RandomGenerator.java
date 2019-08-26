@@ -22,9 +22,6 @@ public class RandomGenerator extends java.util.Random {
     private long seed;
     private String seedString;
 
-    /**
-     * Instantiate a RandGen generator with no seed
-     */
     public RandomGenerator() {
         this.generator = new Random(); // Create a generator
         this.seed = generator.nextLong(); // Ask it to generate a seed for itself
@@ -33,10 +30,6 @@ public class RandomGenerator extends java.util.Random {
 
     }
 
-     /**
-     * Instantiate a RandGen generator with a String type object.
-     * If the string can be parsed as a long, it will be interpreted as a long.
-     */
     public RandomGenerator(String seedString) {
         if (seedString.matches(VALID_LONG_REGEX)) {
             this.seed = Long.parseLong(seedString);
