@@ -10,7 +10,6 @@ import java.util.Random;
  * exclusively using this package.
  * 
  * @author Plat251
- * @version 1.0
  * @since 2019-08-15
  */
 
