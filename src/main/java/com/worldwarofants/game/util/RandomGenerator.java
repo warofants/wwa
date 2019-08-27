@@ -17,15 +17,14 @@ public class RandomGenerator extends Random {
     private static final long serialVersionUID = -5378246343912387722L;
     private static final String VALID_LONG_REGEX = "-?\\d+(\\.\\d+)?";
 
-    private Random generator;
     private long seed;
     private String seedString;
 
     public RandomGenerator() {
-        this.generator = new Random();
-        this.seed = generator.nextLong();
+        super();
+        this.seed = nextLong();
         this.seedString = Long.toString(this.seed);
-        this.generator.setSeed(seed);
+        this.setSeed(seed);
 
     }
 
@@ -37,7 +36,7 @@ public class RandomGenerator extends Random {
             this.seed = seedString.hashCode();
             this.seedString = seedString;
         }
-        this.generator = new Random(seed);
+        this.setSeed(seed);
     }
 
     /**
@@ -64,7 +63,7 @@ public class RandomGenerator extends Random {
             if (start > end) {
                 return end;
             }
-            int randomNumber = this.generator.nextInt(end - start);
+            int randomNumber = this.nextInt(end - start);
             randomNumber += start;
             return randomNumber;
     }
@@ -73,7 +72,7 @@ public class RandomGenerator extends Random {
      * @return int an int in range from 0 to end.
      */
     public int getIntInRange(int end) {
-        int randomNumber = this.generator.nextInt(end);
+        int randomNumber = this.nextInt(end);
         return randomNumber;
     }
 }
