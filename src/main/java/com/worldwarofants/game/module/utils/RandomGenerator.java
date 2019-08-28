@@ -7,13 +7,14 @@ import java.util.Random;
  * is to provide developers with a simple way to work with random number
  * generation, as well as allow for precise tweaking of exact methods used.
  * Please make sure to generate your random numbers within the project
- * exclusively using this package.
+ * exclusively using this class.
  * 
  * @author Plat251
  * @since 2019-08-15
  */
 
 public class RandomGenerator extends Random {
+
     private static final long serialVersionUID = -5378246343912387722L;
     private static final String VALID_LONG_REGEX = "-?\\d+(\\.\\d+)?";
 
@@ -54,24 +55,24 @@ public class RandomGenerator extends Random {
     }
 
     /**
-     * Generate an int in range defined by two ints, start and end.
-     * Start must be greater than end. Otherwise end will be returned.
+     * Generate an int in range defined by two ints, start and end. Start must be
+     * greater than end. Otherwise end will be returned.
      * 
      * @return int Returns a random integer between start and end.
      */
     public int getIntInRange(int start, int end) {
-            if (start > end) {
-                return end;
-            }
-            int randomNumber = this.nextInt(end - start);
-            randomNumber += start;
-            return randomNumber;
+        if (start > end) {
+            return end;
+        }
+        int randomNumber = this.nextInt(end - start);
+        randomNumber += start;
+        return randomNumber;
     }
 
     /**
      * @return int an int in range from 0 to end.
      */
     public int getIntInRange(int end) {
-        return getIntInRange(0, int end);
+        return getIntInRange(0, end);
     }
 }
