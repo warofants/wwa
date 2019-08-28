@@ -72,7 +72,6 @@ public class RandomGenerator extends Random {
      * @return int an int in range from 0 to end.
      */
     public int getIntInRange(int end) {
-        int randomNumber = this.nextInt(end);
-        return randomNumber;
+        return getIntInRange(0, int end);
     }
 }
