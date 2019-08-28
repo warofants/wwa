@@ -1,4 +1,4 @@
-package com.worldwarofants.game.util;
+package com.worldwarofants.game.module.utils;
 
 import java.util.Random;
 
