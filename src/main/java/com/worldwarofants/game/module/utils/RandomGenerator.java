@@ -24,7 +24,7 @@ public class RandomGenerator extends Random {
         super();
         this.seed = nextLong();
         this.seedString = Long.toString(this.seed);
-        this.setSeed(seed);
+        setSeed(seed);
 
     }
 
@@ -36,7 +36,7 @@ public class RandomGenerator extends Random {
             this.seed = seedString.hashCode();
             this.seedString = seedString;
         }
-        this.setSeed(seed);
+        setSeed(seed);
     }
 
     /**
