@@ -1,6 +1,10 @@
 language: java
 sudo: false # faster builds
 
+cache:
+  directories:
+  - $HOME/.m2
+
 jdk:
   - openjdk8
   - openjdk11
