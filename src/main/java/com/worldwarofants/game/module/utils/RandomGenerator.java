@@ -26,7 +26,6 @@ public class RandomGenerator extends Random {
         this.seed = nextLong();
         this.seedString = Long.toString(this.seed);
         setSeed(seed);
-
     }
 
     public RandomGenerator(String seedString) {
