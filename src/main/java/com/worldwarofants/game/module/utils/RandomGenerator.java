@@ -32,7 +32,7 @@ public class RandomGenerator extends Random {
     public RandomGenerator(String seedString) {
         if (seedString.matches(VALID_LONG_REGEX)) {
             this.seed = Long.parseLong(seedString);
-            this.seedString = Long.toString(this.seed);
+            this.seedString = seedString;
         } else {
             this.seed = seedString.hashCode();
             this.seedString = seedString;
