@@ -16,7 +16,7 @@ import java.util.Random;
 public class RandomGenerator extends Random {
 
     private static final long serialVersionUID = -5378246343912387722L;
-    private static final String VALID_LONG_REGEX = "-?\\d+(\\.\\d+)?";
+    private static final String VALID_LONG_REGEX = "(-|\\+)?\\d+" ;
 
     private long seed;
     private String seedString;
