@@ -54,13 +54,14 @@ public class RandomGenerator extends Random {
     }
 
     /**
-     * Generate an int in range defined by two ints, start and end. Start must be
-     * greater than end. Otherwise end will be returned.
+     * Generate an int in range defined by two ints, start and end. Start must not be
+     * greater or equal to end, and end minus start must not result in a value greater than
+     * max value of int, otherwise end will be returned.
      * 
      * @return int Returns a random integer between start and end.
      */
     public int getIntInRange(int start, int end) {
-        if (start > end) {
+        if (start >= end) {
             return end;
         }
         int randomNumber = this.nextInt(end - start);
