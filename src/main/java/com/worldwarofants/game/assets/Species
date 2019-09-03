@@ -1,0 +1,42 @@
+example_ant:
+  name: "Example Ant"                          # Common English name of species being modelled
+  name_latin: "exemplum formica"               # Latin name of the species being modelled
+  description: "This isn't a real ant.
+  If this shows up in your game, please
+  submit a bug report. Thanks!"                # Short description. Doesn't have to be multiline.
+  health: 10                                   # Base health of a species
+  attack: 5                                    # Base attack of a species
+  defense: 0                                   # Base defense of a species
+  traits:                                      # List of traits that this species possess
+    - casteless
+    - erroneous
+
+#Starter (Pokemons) Ants
+army_ant:
+  name: "Army Ant"
+  name_latin: "Eciton burchelli"
+  description: "The most aggressive class in the game.
+  Although they don't attack other Army ants, Army ants will attack everything else they encounter immediately, even entire colonies."
+  health: 10
+  attack: 8
+  defense: 4
+  traits:
+    - aggresive
+
+bullet_ant:
+  name: "Bullet Ant"
+  name_latin: "Paraponera clavata"
+  description: "contains ant venom which has a potent sting. 100% effective against humans. "
+
+
+#NPC Ants
+desert_ants:
+
+
+square_head_ants:
+
+
+
+
+
+
