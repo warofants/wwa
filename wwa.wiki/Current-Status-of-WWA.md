@@ -1,0 +1,1 @@
+This page has been moved to the ["Home" page](https://github.com/warofants/wwa/wiki), because GitHub, in all of its wisdom,  forces you to have a Wiki page named "Home". I will delete this page soon (there are still links out there pointing here)
