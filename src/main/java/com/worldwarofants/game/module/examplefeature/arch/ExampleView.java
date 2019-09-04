@@ -1,13 +1,14 @@
 package com.worldwarofants.game.module.examplefeature.arch;
 
 import com.worldwarofants.game.arch.AbstractView;
+import com.worldwarofants.game.utils.AsciiArtReader;
 
 class ExampleView extends AbstractView<ExampleViewModel> {
 
-    // You can simply add "assets" to the game like this, as constants, in their respective view.
+    // You can simply add "resources" to the game like this, as constants, in their respective view.
     // Because they will be simple text, there will not be a problem.
     // Also that way they will be divided by what screen they are used in.
-    private static final String GAME_TITLE = "WORLD WAR OF ANTS";
+    private static final String GAME_TITLE = AsciiArtReader.getArtFrom("LOGO.txt");
 
     ExampleView(ExampleViewModel viewModel) {
         super(viewModel);
