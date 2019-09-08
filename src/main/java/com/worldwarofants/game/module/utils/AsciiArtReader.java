@@ -29,11 +29,12 @@ public class AsciiArtReader {
         //Subs fileName into the formatted string
         String completeFileName = String.format(fileNameFormat,fileName);
 
-        try(//try-with-resources is declared
-                InputStreamReader fileReader = new InputStreamReader(
-                        classLoader.getResourceAsStream(completeFileName)
+        //try-with-resources is declared
+        try(InputStreamReader fileReader = new InputStreamReader
+                (
+                    classLoader.getResourceAsStream(completeFileName)
                 )
-        ) {
+            ) {
             /* Data from the InputStreamReader is read as an int, dataByte
              * dataByte is converted to a char and appended to the String, art
              * art is returned */
