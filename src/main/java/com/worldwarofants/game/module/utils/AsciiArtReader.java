@@ -1,4 +1,4 @@
-package com.worldwarofants.game.utils;
+package com.worldwarofants.game.module.utils;
 
 import java.lang.ClassLoader;
 import java.io.IOException;

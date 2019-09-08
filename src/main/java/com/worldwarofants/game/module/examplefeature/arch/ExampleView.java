@@ -1,7 +1,7 @@
 package com.worldwarofants.game.module.examplefeature.arch;
 
 import com.worldwarofants.game.arch.AbstractView;
-import com.worldwarofants.game.utils.AsciiArtReader;
+import com.worldwarofants.game.module.utils.AsciiArtReader;
 
 class ExampleView extends AbstractView<ExampleViewModel> {
 
