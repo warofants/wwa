@@ -3,6 +3,7 @@
 </p>
 
 # World War of Ants
+
 ![GitHub contributors](https://img.shields.io/github/contributors/warofants/wwa)
 ![Discord](https://img.shields.io/discord/610183667905462306)
 [![Build Status](https://travis-ci.org/warofants/wwa.svg?branch=master)](https://travis-ci.org/warofants/wwa)
@@ -93,7 +94,7 @@ alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
 
 * Build the MVP, UML and GitHub layout for the project's foundation
 * Develop a very basic console-based game in Java
-* Add additional features or enhancements 
+* Add additional features or enhancements
 
 </details>
 
@@ -111,7 +112,6 @@ alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
 
 * Expand upon existing 2D game
 * Possibly integrate 3D graphics into existing scenes
-* Look into multiplayer possibilities 
 
 </details>
 
@@ -125,11 +125,9 @@ alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
 
 First, you'll need to install the Java Development Kit (JDK). Considering compatibility and other issues, it was decided that OpenJDK 8 would be used to develop this project.
 
-We recommend getting OpenJDK from [AdoptOpenJDK](https://adoptopenjdk.net/), select OpenJDK 8 and choose HotSpot as the JVM.
+We recommend getting OpenJDK 8 from [AdoptOpenJDK](https://adoptopenjdk.net/), select OpenJDK 8 and choose HotSpot as the JVM.
 
 If you do not want to use that you can also use [Redhat's openJDK](https://developers.redhat.com/products/openjdk/download).
-
-Since OpenJDK 11 is (mostly) backwards compatible with java 8 you can also use that, which is the jdk shipped with Intellij IDEA (This means that if you plan on using Intellij IDEA you can skip this step).
 
 </p>
 </details>
@@ -140,12 +138,12 @@ Since OpenJDK 11 is (mostly) backwards compatible with java 8 you can also use t
 
 You'll also need to install an Integrated Development Environment (IDE) to make your own life easier. There are several good options to choose from, so feel free to pick one. A few options below:
 
- + Visual Studio Code (code-oss)
- + Eclipse
- + NetBeans
- + IntelliJ Community IDEA
+ + [Visual Studio Code](https://code.visualstudio.com/) (code-oss) (Very popular, fast & lightweight, feature-rich IDE)
+ + [Eclipse](https://www.eclipse.org/ide/) (Written in Java, a long-time favorite, feature-rich IDE)
+ + [NetBeans](https://netbeans.org/) (A good feature-rich "first" IDE)
+ + [IntelliJ Community IDEA](https://www.jetbrains.com/idea/) (Quickly growing in popularity, resource-heavy, feature-rich IDE)
 
-We recommend using [IntelliJ](https://www.jetbrains.com/idea/), as it is easy to install and contains tutorials for its interface. It also gives you the option to download plugins, some of which may be useful to you. Its most recent version include OpenJDK 11, making step one optional.
+Here are the [Stack Overflow Developer Survey Results from 2019](https://insights.stackoverflow.com/survey/2019#development-environments-and-tools), which gives you an idea for which IDEs are being used in the industry.
 
 </p>
 </details>
