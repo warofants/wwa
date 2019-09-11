@@ -3,8 +3,7 @@
 </p>
 
 # World War of Ants
-
-![GitHub contributors](https://img.shields.io/github/contributors/warofants/wwa)
+[![GitHub contributors](https://img.shields.io/github/contributors/warofants/wwa)](https://github.com/warofants/wwa/graphs/contributors)
 ![Discord](https://img.shields.io/discord/610183667905462306)
 [![Build Status](https://travis-ci.org/warofants/wwa.svg?branch=master)](https://travis-ci.org/warofants/wwa)
 [![codecov](https://codecov.io/gh/warofants/wwa/branch/master/graph/badge.svg)](https://codecov.io/gh/warofants/wwa)
