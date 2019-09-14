@@ -1,9 +1,9 @@
 package com.worldwarofants.game;
 
-import com.worldwarofants.game.ConsoleGame;
-
 public class Main {
 
+
+    //test comment 9/14/2019
     public static void main(String[] args) {
         ConsoleGame game = new ConsoleGame();
         game.run();
