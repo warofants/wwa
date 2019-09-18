@@ -5,7 +5,5 @@ package com.worldwarofants.game.module;
  * This is used for the navigation between modules.
  */
 public enum ModuleName {
-    EXAMPLE,
-    STARTMENU,
-    NEWGAME
+    EXAMPLE
 }
