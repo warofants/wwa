@@ -4,9 +4,9 @@ import com.worldwarofants.game.arch.AbstractController;
 import com.worldwarofants.game.arch.module.AbstractModule;
 import com.worldwarofants.game.arch.module.ModuleManager;
 import com.worldwarofants.game.arch.module.IModuleNavigator;
-import com.worldwarofants.game.module.examplefeature.arch.ExampleModule;
+import com.worldwarofants.game.module.startmenu.StartMenuModule;
+import com.worldwarofants.game.module.newgame.NewGameModule;
 import com.worldwarofants.game.model.World;
-
 import java.util.Scanner;
 
 /**
@@ -48,12 +48,12 @@ public class ConsoleGame extends ModuleManager {
 
     @Override
     protected AbstractModule defineStartingModule(IModuleNavigator navigator) {
-        return new ExampleModule(world, navigator);
+        return new StartMenuModule(world, navigator);
     }
 
     @Override
     protected void defineModules(IModuleNavigator navigator) {
-        addModule(new ExampleModule(world, navigator));
+        addModule(new NewGameModule(world, navigator));
     }
 
     @Override
