@@ -4,10 +4,16 @@
 
 # World War of Ants
 
-![GitHub contributors](https://img.shields.io/github/contributors/warofants/wwa)
-![Discord](https://img.shields.io/discord/610183667905462306)
-[![Build Status](https://travis-ci.org/warofants/wwa.svg?branch=master)](https://travis-ci.org/warofants/wwa)
-[![codecov](https://codecov.io/gh/warofants/wwa/branch/master/graph/badge.svg)](https://codecov.io/gh/warofants/wwa)
+<p align="center">
+<a href="https://github.com/warofants/wwa/graphs/contributors" alt="Contributors">
+        <img src="https://img.shields.io/github/contributors/warofants/wwa" /></a>
+<a href="https://discordapp.com/channels/610183667905462306/610183668354515004">
+        <img src="https://img.shields.io/discord/610183667905462306?logo=discord"</a>
+<a href="https://travis-ci.org/warofants/wwa">
+        <img src="https://travis-ci.org/warofants/wwa.svg?branch=master" /></a>
+<a href="https://codecov.io/gh/warofants/wwa" alt="Activity">
+        <img src="https://codecov.io/gh/warofants/wwa/branch/master/graph/badge.svg" /></a>
+</p>
 
 __World War of Ants \**the game*\*__ is about managing a live colony of ants, making sure the colony is fed, maintained, defended and prosperous. The object of the game is to defeat all surrounding rival colonies within the game-world. The player can choose from various ant species, each with its own unique set of characteristics and traits, and each requiring a completely different strategy to win. Other rival colonies can also invade the player's colony.
 
