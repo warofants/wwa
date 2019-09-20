@@ -4,7 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 public class ConsoleOutputHandler{
 
-    private static final long SPELL_DELAY = 30;
+    private static final long SPELL_DELAY = 15;
 
     private void ConsoleOutputHandler(){
         //this class is intended to be static and not instanced.
