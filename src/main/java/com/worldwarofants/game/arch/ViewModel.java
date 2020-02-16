@@ -9,6 +9,6 @@ package com.worldwarofants.game.arch;
  * @see AbstractView
  * @author Veradux
  */
-public interface IViewModel {
+public interface ViewModel {
 
 }

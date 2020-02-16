@@ -1,7 +1,7 @@
 package com.worldwarofants.game.module.examplefeature.arch;
 
 import com.worldwarofants.game.arch.console.command.AbstractCommandHandler;
-import com.worldwarofants.game.arch.console.command.ICommand;
+import com.worldwarofants.game.arch.console.command.Command;
 
 import java.util.Map;
 
@@ -16,7 +16,7 @@ class ExampleCommandHandler extends AbstractCommandHandler<ExampleController> {
     }
 
     @Override
-    protected void defineCommands(Map<String, ICommand<ExampleController>> commands) {
+    protected void defineCommands(Map<String, Command<ExampleController>> commands) {
         commands.put(COMMAND_SHOW_GAME_TITLE, (ExampleController::gameTitle));
         commands.put(COMMAND_SHOW_ANTS, (ExampleController::showAllAnts));
         commands.put(ReproduceCommand.COMMAND_NAME, new ReproduceCommand());

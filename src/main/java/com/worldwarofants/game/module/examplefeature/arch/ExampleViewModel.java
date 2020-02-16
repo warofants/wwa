@@ -1,11 +1,11 @@
 package com.worldwarofants.game.module.examplefeature.arch;
 
-import com.worldwarofants.game.arch.IViewModel;
+import com.worldwarofants.game.arch.ViewModel;
 
 import java.util.ArrayList;
 import java.util.List;
 
-class ExampleViewModel implements IViewModel {
+class ExampleViewModel implements ViewModel {
 
     private List<String> antNames;
 

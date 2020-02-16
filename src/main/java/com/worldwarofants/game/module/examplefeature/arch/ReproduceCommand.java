@@ -1,8 +1,8 @@
 package com.worldwarofants.game.module.examplefeature.arch;
 
-import com.worldwarofants.game.arch.console.command.ICommand;
+import com.worldwarofants.game.arch.console.command.Command;
 
-class ReproduceCommand implements ICommand<ExampleController> {
+class ReproduceCommand implements Command<ExampleController> {
 
     static final String COMMAND_NAME = "reproduce";
     static final int PARENT_NAME_INDEX = 0;

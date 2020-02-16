@@ -1,7 +1,7 @@
 package com.worldwarofants.game.arch;
 
-import com.worldwarofants.game.arch.console.command.ICommand;
-import com.worldwarofants.game.arch.module.IModuleNavigator;
+import com.worldwarofants.game.arch.console.command.Command;
+import com.worldwarofants.game.arch.module.ModuleNavigator;
 import com.worldwarofants.game.module.ModuleName;
 
 /**
@@ -16,15 +16,15 @@ import com.worldwarofants.game.module.ModuleName;
  *  the controller method must still have the String[] arguments parameter. </p>
  *
  * @see AbstractView
- * @see ICommand
+ * @see Command
  * @author Veradux
  */
 public abstract class AbstractController<View extends AbstractView> {
 
-    private final IModuleNavigator moduleNavigator;
+    private final ModuleNavigator moduleNavigator;
     protected final View view;
 
-    public AbstractController(View view, IModuleNavigator navigator) {
+    public AbstractController(View view, ModuleNavigator navigator) {
         this.view = view;
         this.moduleNavigator = navigator;
     }
@@ -36,7 +36,7 @@ public abstract class AbstractController<View extends AbstractView> {
      * To achieve that, you would need to use this method inside of the ScoutingController,
      * like this: <code> navigateTo(ModuleName.COMBAT, arguments) </code>
      *
-     * @see IModuleNavigator
+     * @see ModuleNavigator
      */
     protected void navigateTo(ModuleName moduleName, String[] arguments) {
         moduleNavigator.navigateTo(moduleName, arguments);

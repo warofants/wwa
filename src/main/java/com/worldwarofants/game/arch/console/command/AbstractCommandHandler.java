@@ -2,7 +2,7 @@ package com.worldwarofants.game.arch.console.command;
 
 import com.worldwarofants.game.arch.AbstractController;
 import com.worldwarofants.game.arch.module.AbstractModule;
-import com.worldwarofants.game.arch.module.IModuleNavigator;
+import com.worldwarofants.game.arch.module.ModuleNavigator;
 import com.worldwarofants.game.module.ModuleName;
 
 import java.util.Arrays;
@@ -16,7 +16,7 @@ import java.util.TreeMap;
  * The Handler will look for a command which matches the input.
  * When the command is found, it will be executed.
  *
- * @see ICommand
+ * @see Command
  * @see AbstractModule
  * @author Veradux
  */
@@ -28,7 +28,7 @@ public abstract class AbstractCommandHandler<Controller extends AbstractControll
     private static final String INVALID_COMMAND_MESSAGE = "Invalid, try again.";
 
     private final Controller controller;
-    private final Map<String, ICommand<Controller>> commands;
+    private final Map<String, Command<Controller>> commands;
 
     public AbstractCommandHandler(Controller controller) {
         this.controller = controller;
@@ -81,7 +81,7 @@ public abstract class AbstractCommandHandler<Controller extends AbstractControll
      *
      * @author Veradux
      */
-    protected abstract void defineCommands(Map<String, ICommand<Controller>> commands);
+    protected abstract void defineCommands(Map<String, Command<Controller>> commands);
 
     /**
      * This method runs whenever you navigate to a module.
@@ -91,7 +91,7 @@ public abstract class AbstractCommandHandler<Controller extends AbstractControll
      * Those arguments can be the ones from the player's previous input,
      * or altered by the controller for some specific case.
      *
-     * @see IModuleNavigator#navigateTo(ModuleName, String[])
+     * @see ModuleNavigator#navigateTo(ModuleName, String[])
      * @see AbstractModule
      */
     public abstract void executeStartingCommand(String[] arguments);

@@ -1,7 +1,7 @@
 package com.worldwarofants.game.module.examplefeature.arch;
 
 import com.worldwarofants.game.arch.AbstractController;
-import com.worldwarofants.game.arch.module.IModuleNavigator;
+import com.worldwarofants.game.arch.module.ModuleNavigator;
 import com.worldwarofants.game.model.ExampleAnt;
 import com.worldwarofants.game.service.AntsService;
 
@@ -12,7 +12,7 @@ class ExampleController extends AbstractController<ExampleView> {
 
     private AntsService antsService;
 
-    ExampleController(ExampleView view, IModuleNavigator navigator, AntsService antsService) {
+    ExampleController(ExampleView view, ModuleNavigator navigator, AntsService antsService) {
         super(view, navigator);
         this.antsService = antsService;
     }

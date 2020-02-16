@@ -11,7 +11,7 @@ import com.worldwarofants.game.arch.module.AbstractModule;
  * @see AbstractController
  * @author Veradux
  */
-public interface ICommand<Controller extends AbstractController> {
+public interface Command<Controller extends AbstractController> {
 
     /**
      * <p>

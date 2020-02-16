@@ -10,7 +10,7 @@ package com.worldwarofants.game.arch;
  * @see AbstractController
  * @author Veradux
  */
-public abstract class AbstractView<VM extends IViewModel> {
+public abstract class AbstractView<VM extends ViewModel> {
 
     private VM viewModel;
 

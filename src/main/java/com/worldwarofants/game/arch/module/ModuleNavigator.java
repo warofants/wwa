@@ -12,7 +12,7 @@ import com.worldwarofants.game.module.ModuleName;
  *
  * @author Veradux
  */
-public interface IModuleNavigator {
+public interface ModuleNavigator {
 
     /**
      * Use this method to change the current Module in the game.

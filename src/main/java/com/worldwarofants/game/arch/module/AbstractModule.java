@@ -2,7 +2,7 @@ package com.worldwarofants.game.arch.module;
 
 import com.worldwarofants.game.module.ModuleName;
 import com.worldwarofants.game.arch.console.command.AbstractCommandHandler;
-import com.worldwarofants.game.arch.console.command.ICommand;
+import com.worldwarofants.game.arch.console.command.Command;
 import com.worldwarofants.game.model.World;
 
 /**
@@ -22,9 +22,9 @@ public abstract class AbstractModule<CommandHandler extends AbstractCommandHandl
 
     private CommandHandler commandHandler;
     protected World world;
-    protected IModuleNavigator navigator;
+    protected ModuleNavigator navigator;
 
-    public AbstractModule(World world, IModuleNavigator navigator) {
+    public AbstractModule(World world, ModuleNavigator navigator) {
         this.world = world;
         this.navigator = navigator;
         commandHandler = initDependencies();
@@ -46,7 +46,7 @@ public abstract class AbstractModule<CommandHandler extends AbstractCommandHandl
      * Those arguments can be the ones from the player's previous input,
      * or altered by the controller for some specific case.
      *
-     * @see IModuleNavigator#navigateTo(ModuleName, String[])
+     * @see ModuleNavigator#navigateTo(ModuleName, String[])
      */
     public void start(String[] arguments) {
         commandHandler.executeStartingCommand(arguments);
@@ -69,7 +69,7 @@ public abstract class AbstractModule<CommandHandler extends AbstractCommandHandl
      * When the player inputs their command, the text is split by spaces.
      * The first word is the command name, while the others are considered as arguments. </p>
      *
-     * @see ICommand#execute
+     * @see Command#execute
      * @author Veradux
      */
     public void executeCommand(String input) {
